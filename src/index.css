@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@400;600;700;800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Inter', sans-serif;
+  --font-headline: 'Manrope', sans-serif;
+
+  --color-background: #fcf9f8;
+  --color-surface: #ffffff;
+  --color-surface-soft: #f6f2ef;
+  --color-surface-muted: #ebe7e2;
+  --color-text: #292524;
+  --color-text-muted: #6b645d;
+  --color-headline: #1f1a17;
+  --color-accent: #76551a;
+  --color-accent-strong: #5e4312;
+  --color-accent-soft: #f1dba5;
+  --color-accent-tertiary: #ece5da;
+  --color-success-bg: #eef6ee;
+  --color-success-border: #bdd6bc;
+  --color-success-text: #224522;
+  --color-danger: #9e422c;
+
+  --shadow-panel: 0 24px 60px rgba(48, 33, 17, 0.08);
+  --shadow-card: 0 24px 48px rgba(50, 50, 51, 0.06);
+  --shadow-story: 0 30px 60px rgba(48, 33, 17, 0.14);
+}
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+
+  html {
+    background: linear-gradient(180deg, #f7f1ec 0%, var(--color-background) 18%);
+  }
+
+  body {
+    margin: 0;
+    min-width: 320px;
+    background:
+      radial-gradient(circle at top left, rgba(187, 158, 111, 0.1), transparent 28%),
+      linear-gradient(180deg, #f7f1ec 0%, var(--color-background) 18%);
+    color: var(--color-text);
+    font-family: var(--font-sans);
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  a {
+    color: inherit;
+  }
+
+  button {
+    cursor: pointer;
+  }
+
+  img {
+    display: block;
+    max-width: 100%;
+  }
+
+  #root {
+    min-height: 100svh;
+  }
+}
