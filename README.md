@@ -6,6 +6,7 @@ Frontend prototype for the `Landing Page`, `Home Catalog`, `User Profile`, `Regi
 
 - responsive landing, catalog, profile, registration, and login screens inspired by the Stitch designs
 - reusable React components for landing sections, catalog views, profile dashboard, auth layout, form behavior, shared footer, and route-based navigation
+- Tailwind-first styling; `src/index.css` now only defines the shared theme tokens and base rules
 - client-side validation for register and login flows
 - local editorial and gallery assets imported into the app instead of relying on opaque hosted runtime URLs
 
@@ -21,7 +22,7 @@ Frontend prototype for the `Landing Page`, `Home Catalog`, `User Profile`, `Regi
 - `src/components/login/LoginPage.tsx`: login composition and moodboard gallery
 - `src/components/login/LoginForm.tsx`: controlled login form, validation, password visibility, and success state
 - `src/components/shared/SiteFooter.tsx`: shared footer for landing and auth screens
-- `src/index.css`: visual system and responsive layout styles
+- `src/index.css`: Tailwind theme tokens, fonts, and minimal global base rules
 - `docs/register-screen-prd.md`: implementation planning document and scope decisions
 - `stitch_exports/project_12615917652504803710/`: downloaded Stitch HTML and screenshot references
 
@@ -50,4 +51,3 @@ Current auth routes:
 - `/profile`
 - `/register`
 - `/login`
-# feriaAmericanaStore
