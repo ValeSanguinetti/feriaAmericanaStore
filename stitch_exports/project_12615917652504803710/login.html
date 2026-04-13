@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-tertiary-container": "#5d5c57",
+                    "on-background": "#323233",
+                    "tertiary-dim": "#54534e",
+                    "primary-dim": "#535252",
+                    "surface-tint": "#5f5e5e",
+                    "on-primary-container": "#525151",
+                    "secondary": "#785a1a",
+                    "surface-variant": "#e4e2e2",
+                    "surface-container-low": "#f6f3f2",
+                    "surface-container-lowest": "#ffffff",
+                    "on-primary-fixed": "#403f3f",
+                    "on-tertiary-fixed-variant": "#676661",
+                    "on-primary-fixed-variant": "#5c5b5b",
+                    "outline-variant": "#b2b2b1",
+                    "tertiary-container": "#f6f3ec",
+                    "on-secondary-fixed-variant": "#745716",
+                    "on-error-container": "#742410",
+                    "surface-dim": "#dbdad9",
+                    "on-secondary-fixed": "#543b00",
+                    "surface-bright": "#fcf9f8",
+                    "primary-container": "#e5e2e1",
+                    "on-primary": "#faf7f6",
+                    "secondary-container": "#ffdea5",
+                    "primary": "#5f5e5e",
+                    "error-container": "#fe8b70",
+                    "tertiary-fixed-dim": "#e8e5de",
+                    "secondary-dim": "#6b4e0e",
+                    "secondary-fixed": "#ffdea5",
+                    "primary-fixed-dim": "#d6d4d3",
+                    "error": "#9e422c",
+                    "on-secondary": "#fff8f1",
+                    "inverse-surface": "#0e0e0e",
+                    "on-surface": "#323233",
+                    "surface-container": "#f0eded",
+                    "surface-container-high": "#eae8e7",
+                    "on-error": "#fff7f6",
+                    "on-secondary-container": "#694d0c",
+                    "inverse-primary": "#ffffff",
+                    "surface-container-highest": "#e4e2e2",
+                    "surface": "#fcf9f8",
+                    "on-tertiary": "#fcf9f2",
+                    "background": "#fcf9f8",
+                    "on-surface-variant": "#5f5f5f",
+                    "outline": "#7b7b7a",
+                    "inverse-on-surface": "#9e9c9c",
+                    "tertiary-fixed": "#f6f3ec",
+                    "primary-fixed": "#e5e2e1",
+                    "on-tertiary-fixed": "#4a4a45",
+                    "secondary-fixed-dim": "#f8cf83",
+                    "error-dim": "#5c1202",
+                    "tertiary": "#605f5a"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Manrope"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; }
+        .font-headline { font-family: 'Manrope', sans-serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .ambient-shadow {
+            box-shadow: 0px 24px 48px rgba(50, 50, 51, 0.06);
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface min-h-screen flex flex-col">
+<!-- Top Navigation (Shell suppressed for Transactional Flow, only showing brand anchor) -->
+<header class="fixed top-0 w-full z-50 bg-stone-50/80 backdrop-blur-xl h-20 flex items-center justify-center">
+<div class="text-2xl font-bold tracking-tighter text-stone-900 font-headline">L'ATELIER</div>
+</header>
+<main class="flex-grow flex items-center justify-center px-6 pt-20">
+<!-- Login Canvas -->
+<div class="w-full max-w-md">
+<div class="bg-surface-container-lowest p-8 md:p-12 rounded-xl ambient-shadow flex flex-col gap-8">
+<!-- Editorial Header -->
+<div class="text-center">
+<h1 class="text-3xl font-extrabold font-headline tracking-tight text-on-surface mb-2">Welcome Back</h1>
+<p class="text-on-surface-variant text-sm font-body">Enter your details to access your curated collection.</p>
+</div>
+<form class="flex flex-col gap-6">
+<!-- Email Field -->
+<div class="flex flex-col gap-1.5">
+<label class="text-[0.75rem] uppercase tracking-widest font-label font-medium text-on-surface-variant ml-1" for="email">Email Address</label>
+<div class="relative group">
+<input class="w-full bg-surface-container-high border-none rounded-lg py-3.5 px-4 text-on-surface placeholder:text-outline focus:ring-1 focus:ring-secondary transition-all outline-none" id="email" name="email" placeholder="name@example.com" required="" type="email"/>
+</div>
+</div>
+<!-- Password Field -->
+<div class="flex flex-col gap-1.5">
+<div class="flex justify-between items-center px-1">
+<label class="text-[0.75rem] uppercase tracking-widest font-label font-medium text-on-surface-variant" for="password">Password</label>
+<a class="text-[0.7rem] uppercase tracking-widest font-label text-secondary hover:text-secondary-dim transition-colors" href="#">Forgot password</a>
+</div>
+<div class="relative group">
+<input class="w-full bg-surface-container-high border-none rounded-lg py-3.5 px-4 text-on-surface placeholder:text-outline focus:ring-1 focus:ring-secondary transition-all outline-none" id="password" name="password" placeholder="••••••••" required="" type="password"/>
+<button class="absolute right-4 top-1/2 -translate-y-1/2 text-outline-variant hover:text-on-surface-variant transition-colors" type="button">
+<span class="material-symbols-outlined text-[20px]">visibility</span>
+</button>
+</div>
+</div>
+<!-- CTA Actions -->
+<div class="flex flex-col gap-4 mt-2">
+<button class="w-full bg-primary text-on-primary py-4 rounded-lg font-headline font-semibold text-sm hover:bg-primary-dim active:opacity-70 transition-all duration-200 uppercase tracking-wider" type="submit">
+                            Login
+                        </button>
+<div class="relative py-4 flex items-center">
+<div class="flex-grow border-t border-outline-variant/20"></div>
+<span class="flex-shrink mx-4 text-[0.65rem] uppercase tracking-[0.2em] text-outline-variant font-label">Or</span>
+<div class="flex-grow border-t border-outline-variant/20"></div>
+</div>
+<button class="w-full bg-secondary-container text-on-secondary-container py-4 rounded-lg font-headline font-semibold text-sm hover:opacity-80 active:opacity-70 transition-all duration-200 uppercase tracking-wider" type="button">
+                            Create account
+                        </button>
+</div>
+</form>
+<!-- Social Proof / Aesthetic Anchor -->
+<div class="grid grid-cols-3 gap-2 mt-4">
+<div class="h-24 rounded-lg overflow-hidden bg-surface-container-high">
+<img class="w-full h-full object-cover grayscale opacity-60" data-alt="close-up of premium textured wool fabric in soft beige tone with dramatic studio lighting and shadows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBSFnbXeuaYLEgmX5xpt5NNQNs91SW9Wm0WhWFGNR03tuHKiRgW5Rt-4oaVVD7Wnn4vGLJGHdeJeWjpXiC8zgjw9y6ojgJW2Dx5pZ5eHruWp6rZqJrmPx4OATsEm33ibuYbzTtZKOliMD2T8ovgiFlFcuxNSnFdKk5EIJHt--pwMDSvfYc1PoI9mxXIbP-lOojdj9SRRUixQWGr0WASxSSXukggUiOUAiDS4ns6n-svev4vQC4X6yp97gOAq7lnQxJhkkifpuGqWjg"/>
+</div>
+<div class="h-24 rounded-lg overflow-hidden bg-surface-container-high">
+<img class="w-full h-full object-cover grayscale opacity-60" data-alt="minimalist fashion model wearing high-end white linen clothing standing against a neutral stone background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBdvHldcjkNWM038vMzER4qYJ2iq3FwpQYzFGSeRthId4PDHSrKgfkKos16FW4kAhTdHvUhgFp7WJYxlKjaa_S7eE9nOUQ2sI5UtJm_LU2aiQYDD_XJz5QHb6OXM_7vB4j3uwCFhbelcr-3kJ6dTUQodVCXi1TJzJ6f6hYMFjihK8k8qQkA03ME6cuPFZIk6KlPHs2E7rbGJXNBp5_DJg-nStGOMNy-EOFI4foLAboIeBDe12j5pFw0pcX9gxerA3pLDAt1lMkdfpo"/>
+</div>
+<div class="h-24 rounded-lg overflow-hidden bg-surface-container-high">
+<img class="w-full h-full object-cover grayscale opacity-60" data-alt="neatly organized row of designer clothes on a minimalist wooden rack in a sunlit boutique space" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBn0NNYn1onkBzPdL-y7emt43uQS8oC6F6DqajQQ47xdhO4f3r1yDjamOZ2wPyVCuyEg7qmiJcG7By_JGz9v1yUk3LjYA6GMrQ8YpChz-SoXMuJfCoOC7fIy70CgQua6yB2yH1ogoriWQV-RqHlu-OjZ2mckKZ5E6VcthmVj2NUAh3Oa85nbkT49ku3mHtIqEzCcgjkVhKi0mMpiT5uMLb2jDEC4R57CxrC2-3r6J7AkGxCVb-vZw3RXb7KGKQQUTxQ-3xNDXAVHNE"/>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer (Using Shared Component mapping) -->
+<footer class="w-full py-12 bg-stone-100 dark:bg-zinc-900 mt-20">
+<div class="flex flex-col md:flex-row justify-between items-center px-12 gap-6 w-full max-w-screen-2xl mx-auto">
+<div class="text-lg font-bold text-stone-800 dark:text-stone-200 font-headline tracking-tighter">L'ATELIER</div>
+<div class="flex flex-wrap justify-center gap-8">
+<a class="font-['Inter'] text-xs uppercase tracking-widest text-stone-500 hover:text-stone-900 transition-colors" href="#">Sustainability</a>
+<a class="font-['Inter'] text-xs uppercase tracking-widest text-stone-500 hover:text-stone-900 transition-colors" href="#">Shipping</a>
+<a class="font-['Inter'] text-xs uppercase tracking-widest text-stone-500 hover:text-stone-900 transition-colors" href="#">Returns</a>
+<a class="font-['Inter'] text-xs uppercase tracking-widest text-stone-500 hover:text-stone-900 transition-colors" href="#">Privacy Policy</a>
+<a class="font-['Inter'] text-xs uppercase tracking-widest text-stone-500 hover:text-stone-900 transition-colors" href="#">Terms of Service</a>
+</div>
+<div class="font-['Inter'] text-xs uppercase tracking-widest text-stone-600 dark:text-zinc-400">
+                © 2024 L'ATELIER DIGITAL. ALL RIGHTS RESERVED.
+            </div>
+</div>
+</footer>
+</body></html>

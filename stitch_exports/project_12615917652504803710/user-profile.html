@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-tertiary-container": "#5d5c57",
+                    "on-background": "#323233",
+                    "tertiary-dim": "#54534e",
+                    "primary-dim": "#535252",
+                    "surface-tint": "#5f5e5e",
+                    "on-primary-container": "#525151",
+                    "secondary": "#785a1a",
+                    "surface-variant": "#e4e2e2",
+                    "surface-container-low": "#f6f3f2",
+                    "surface-container-lowest": "#ffffff",
+                    "on-primary-fixed": "#403f3f",
+                    "on-tertiary-fixed-variant": "#676661",
+                    "on-primary-fixed-variant": "#5c5b5b",
+                    "outline-variant": "#b2b2b1",
+                    "tertiary-container": "#f6f3ec",
+                    "on-secondary-fixed-variant": "#745716",
+                    "on-error-container": "#742410",
+                    "surface-dim": "#dbdad9",
+                    "on-secondary-fixed": "#543b00",
+                    "surface-bright": "#fcf9f8",
+                    "primary-container": "#e5e2e1",
+                    "on-primary": "#faf7f6",
+                    "secondary-container": "#ffdea5",
+                    "primary": "#5f5e5e",
+                    "error-container": "#fe8b70",
+                    "tertiary-fixed-dim": "#e8e5de",
+                    "secondary-dim": "#6b4e0e",
+                    "secondary-fixed": "#ffdea5",
+                    "primary-fixed-dim": "#d6d4d3",
+                    "error": "#9e422c",
+                    "on-secondary": "#fff8f1",
+                    "inverse-surface": "#0e0e0e",
+                    "on-surface": "#323233",
+                    "surface-container": "#f0eded",
+                    "surface-container-high": "#eae8e7",
+                    "on-error": "#fff7f6",
+                    "on-secondary-container": "#694d0c",
+                    "inverse-primary": "#ffffff",
+                    "surface-container-highest": "#e4e2e2",
+                    "surface": "#fcf9f8",
+                    "on-tertiary": "#fcf9f2",
+                    "background": "#fcf9f8",
+                    "on-surface-variant": "#5f5f5f",
+                    "outline": "#7b7b7a",
+                    "inverse-on-surface": "#9e9c9c",
+                    "tertiary-fixed": "#f6f3ec",
+                    "primary-fixed": "#e5e2e1",
+                    "on-tertiary-fixed": "#4a4a45",
+                    "secondary-fixed-dim": "#f8cf83",
+                    "error-dim": "#5c1202",
+                    "tertiary": "#605f5a"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Manrope"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3 { font-family: 'Manrope', sans-serif; }
+    </style>
+</head>
+<body class="bg-surface text-on-surface">
+<!-- Top Navigation Bar -->
+<nav class="fixed top-0 w-full z-50 bg-stone-50/80 dark:bg-zinc-950/80 backdrop-blur-xl shadow-sm dark:shadow-none">
+<div class="flex justify-between items-center px-8 h-20 w-full max-w-screen-2xl mx-auto font-['Manrope'] tracking-tight">
+<div class="text-2xl font-bold tracking-tighter text-stone-900 dark:text-stone-50">L'ATELIER</div>
+<div class="hidden md:flex items-center space-x-8">
+<a class="text-stone-500 dark:text-zinc-400 hover:text-stone-800 dark:hover:text-stone-200 transition-colors" href="#">Collections</a>
+<a class="text-stone-500 dark:text-zinc-400 hover:text-stone-800 dark:hover:text-stone-200 transition-colors" href="#">New Arrivals</a>
+<a class="text-stone-500 dark:text-zinc-400 hover:text-stone-800 dark:hover:text-stone-200 transition-colors" href="#">Lookbook</a>
+<a class="text-stone-500 dark:text-zinc-400 hover:text-stone-800 dark:hover:text-stone-200 transition-colors" href="#">Archive</a>
+</div>
+<div class="flex items-center space-x-6 text-stone-700 dark:text-stone-300">
+<button class="hover:opacity-80 transition-opacity duration-300">
+<span class="material-symbols-outlined" data-icon="shopping_bag">shopping_bag</span>
+</button>
+<button class="text-stone-900 dark:text-stone-50 border-b-2 border-amber-400 dark:border-amber-500 pb-1">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+</button>
+</div>
+</div>
+</nav>
+<main class="pt-32 pb-24 px-8 max-w-screen-2xl mx-auto">
+<!-- Profile Hero / Header -->
+<header class="mb-16 flex flex-col md:flex-row md:items-end gap-8">
+<div class="relative w-32 h-32 rounded-full overflow-hidden bg-surface-container-high flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="Close-up portrait of a chic woman with minimalist makeup against a soft beige studio background, high-end editorial lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCM199jMAhvHDb0bZdF55bnhdEOSt1N4KHnpBq66KYsEPW3XgoceqYlvP9G3_0mKv51HEmnfUFW2R_EfC6h_l5H0zOA32RX01bWJHm4Y0lEojizkHRufmGxfNgLBw3-jMQK2lrNbnnDH2nfOXUhIkv_1rx1bLybLb4DlPHYRFOD_uFsjx0Cb-uDPjcVuymNvMPyHrVUmZIJp7SzfFIw3YeaJemQHj0OtPhNrgB_WqGjbhnyKIU2XoXKbNEMG_ElfTaywy2glWiekME"/>
+</div>
+<div class="flex-grow">
+<div class="label-md text-xs uppercase tracking-widest text-secondary font-semibold mb-2">Member Since 2022</div>
+<h1 class="text-5xl font-bold tracking-tight text-on-surface mb-2">Julianna Vance</h1>
+<p class="text-on-surface-variant max-w-md">Curating a timeless wardrobe through conscious selection and artisanal craftsmanship.</p>
+</div>
+<div class="flex gap-4">
+<button class="px-6 py-3 bg-primary text-on-primary rounded-lg text-sm font-medium hover:bg-primary-dim transition-colors">Edit Profile</button>
+<button class="px-6 py-3 bg-secondary-container text-on-secondary-container rounded-lg text-sm font-medium hover:opacity-90 transition-all">Gold Membership</button>
+</div>
+</header>
+<!-- Dashboard Bento Grid -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+<!-- Personal Information Section -->
+<section class="md:col-span-4 space-y-6">
+<div class="bg-surface-container-low p-8 rounded-xl">
+<h2 class="text-xl font-bold mb-6 text-on-surface">Personal Information</h2>
+<div class="space-y-4">
+<div>
+<span class="block text-[10px] uppercase tracking-widest text-on-surface-variant font-semibold mb-1">Email Address</span>
+<p class="text-on-surface font-medium">j.vance@atelier-digital.com</p>
+</div>
+<div>
+<span class="block text-[10px] uppercase tracking-widest text-on-surface-variant font-semibold mb-1">Shipping Destination</span>
+<p class="text-on-surface font-medium">Lower East Side, NYC, USA</p>
+</div>
+<div>
+<span class="block text-[10px] uppercase tracking-widest text-on-surface-variant font-semibold mb-1">Preferred Size</span>
+<p class="text-on-surface font-medium">EU 38 / Small</p>
+</div>
+</div>
+</div>
+<div class="bg-tertiary-container p-8 rounded-xl">
+<h2 class="text-xl font-bold mb-4 text-on-tertiary-container">Style Profile</h2>
+<p class="text-sm text-on-tertiary-container leading-relaxed mb-6">Your aesthetic is currently leaning towards <span class="font-bold">Architectural Minimalism</span> with a preference for natural fibers.</p>
+<div class="flex flex-wrap gap-2">
+<span class="px-3 py-1 bg-surface-container-lowest text-[10px] uppercase tracking-widest font-bold rounded-full">Silk</span>
+<span class="px-3 py-1 bg-surface-container-lowest text-[10px] uppercase tracking-widest font-bold rounded-full">Monochrome</span>
+<span class="px-3 py-1 bg-surface-container-lowest text-[10px] uppercase tracking-widest font-bold rounded-full">Structured</span>
+</div>
+</div>
+</section>
+<!-- Order History & Favorites -->
+<section class="md:col-span-8 grid grid-cols-1 md:grid-cols-2 gap-6">
+<!-- Recent Orders List -->
+<div class="md:col-span-2 bg-surface-container-lowest p-8 rounded-xl shadow-sm">
+<div class="flex justify-between items-center mb-8">
+<h2 class="text-xl font-bold text-on-surface">Recent Orders</h2>
+<button class="text-xs uppercase tracking-widest text-secondary font-bold hover:underline underline-offset-4">View All</button>
+</div>
+<div class="space-y-6">
+<!-- Order Item -->
+<div class="flex items-center gap-6 p-4 rounded-lg bg-surface hover:bg-surface-container-low transition-colors group">
+<div class="w-16 h-20 bg-surface-container-high rounded-md overflow-hidden flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="Close-up of a high-quality ivory silk blouse with architectural drape and subtle sheen on a neutral studio background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDjmMhrEDFnlq0ZLswY5vn1AKPfivalhtUX_hG7mo8AYS14Emr7TbLe_1S_CEA9kGiPNf6aslKcdab2kry_w-5rTlKzNZkWJ43d5LuiRvR7dHalg93mhrgJddpeLg7lQk6tTbBk9ff5ctY8IgE9oZKPXPwhOmVOdG7bLUY7_iVilO4ex2xwzEE5BK_qcxv_EuT-daJXSmvcZipsEhIinHmCMpzZRAS8_iFvYPI9aCAnOl0gvH2W-DIYrZUEHlbZu95AZBgZ4qZ8rGI"/>
+</div>
+<div class="flex-grow">
+<span class="text-[10px] uppercase tracking-tighter text-on-surface-variant">Order #AT-88291</span>
+<h3 class="font-bold text-on-surface">Raw Silk Drapery Blouse</h3>
+<p class="text-xs text-on-surface-variant">Delivered Oct 12, 2023</p>
+</div>
+<div class="text-right">
+<p class="font-bold text-on-surface">$340.00</p>
+<span class="material-symbols-outlined text-secondary opacity-0 group-hover:opacity-100 transition-opacity" data-icon="chevron_right">chevron_right</span>
+</div>
+</div>
+<!-- Order Item -->
+<div class="flex items-center gap-6 p-4 rounded-lg bg-surface hover:bg-surface-container-low transition-colors group">
+<div class="w-16 h-20 bg-surface-container-high rounded-md overflow-hidden flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="Tailored charcoal wool trousers hanging in a minimalist light-filled boutique interior with soft shadows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC6KGAOuKbPRNOo9pXq7JxJHNz1aPe9T5JG8uzOh9-TVNklJdipKP2nkhGo1LTF9S6mhPUTvkscti1QubF2HuwT0fArnmkHQa8MtPoc1IFQ36t6UZlEEoK8UaUth2tUFTW_YjDs4YHtYhA9z36ko-ZA27ULh4rCYGJhFekCbZ51cht4sNn5mS1UqH8pNnoCd_rdR3v-6tWFZJewLVwQEuAA4Eg0EfFuweCV6JwjvL0t728qzFIKVNcCsf5syz116W--kdxkNO5EV0A"/>
+</div>
+<div class="flex-grow">
+<span class="text-[10px] uppercase tracking-tighter text-on-surface-variant">Order #AT-87550</span>
+<h3 class="font-bold text-on-surface">Structured Wool Trousers</h3>
+<p class="text-xs text-on-surface-variant">Delivered Sep 28, 2023</p>
+</div>
+<div class="text-right">
+<p class="font-bold text-on-surface">$485.00</p>
+<span class="material-symbols-outlined text-secondary opacity-0 group-hover:opacity-100 transition-opacity" data-icon="chevron_right">chevron_right</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Saved Items / Favorites -->
+<div class="bg-surface-container-low p-8 rounded-xl">
+<h2 class="text-xl font-bold mb-6 text-on-surface">Saved Pieces</h2>
+<div class="grid grid-cols-2 gap-4">
+<div class="aspect-[3/4] bg-surface-container-lowest rounded-lg overflow-hidden group relative">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Beige cashmere coat draped elegantly, soft morning light illuminating the luxurious texture and fine stitching" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDreNv9vXQud-NqcB5etgAWQpJnDVWJDosouh9TDiksYOjGL2mi4vo7QJrFy1uhXSULEyeMn4CYKYYypdXQ-0YAaGujz8znxRzPty6U41dGJSFMYZPXqap1GJovin9xHFFstGgvZI2msB6rZLdfbYV_JOTxAjm7mExHb3UQmNZlz-tBbJo2bZDk36_DiBCOgdf0uSygppLB72Uvj8KHXcUsAh_RCkt4M2YbrOhzKPFE2xUPpJUP1V7ibgOt32PrG2y8Y-5dYBMDJLg"/>
+<div class="absolute bottom-2 left-2 bg-surface/90 backdrop-blur-sm px-2 py-1 rounded text-[10px] font-bold">$1,200</div>
+</div>
+<div class="aspect-[3/4] bg-surface-container-lowest rounded-lg overflow-hidden group relative">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Pointed toe leather mules in obsidian black, high-end fashion product photography on a matte grey surface" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBgsNe5HDRWg2ppieAD1BZi8Cu70nIDIGI45aVmeoPRz9jnEWy8oke8r5bqm4AugNTp3-0-_z4c3WX0T2M2jzo8WoELc6_S6bpMVMyNqi_Ld9fKSV24P7Kwyu7sFkDdtQCMKINZeroVlCvzkskTUXIWzu47rv3xghXZ_n_-FDnOLofb8s-WbhYSZlDUCq379q8QxVChQ6UHk8KmBnFdm8Rn4bK8u7KRnPFX2AKNVQ9Q9qAfZDjUoubpCklFf08M67Ue_J-uP_Wji-k"/>
+<div class="absolute bottom-2 left-2 bg-surface/90 backdrop-blur-sm px-2 py-1 rounded text-[10px] font-bold">$550</div>
+</div>
+</div>
+<button class="w-full mt-6 py-3 border border-outline-variant/30 rounded-lg text-xs uppercase tracking-widest font-bold hover:bg-surface-container-lowest transition-colors">Go to Wishlist</button>
+</div>
+<!-- Settings & Preferences -->
+<div class="bg-surface p-8 rounded-xl outline-variant/15 outline">
+<h2 class="text-xl font-bold mb-6 text-on-surface">Account Settings</h2>
+<div class="space-y-2">
+<button class="w-full flex justify-between items-center py-3 px-4 rounded-lg hover:bg-surface-container-high transition-colors text-left group">
+<span class="text-sm font-medium text-on-surface">Security &amp; Privacy</span>
+<span class="material-symbols-outlined text-sm text-outline group-hover:text-secondary transition-colors" data-icon="lock">lock</span>
+</button>
+<button class="w-full flex justify-between items-center py-3 px-4 rounded-lg hover:bg-surface-container-high transition-colors text-left group">
+<span class="text-sm font-medium text-on-surface">Payment Methods</span>
+<span class="material-symbols-outlined text-sm text-outline group-hover:text-secondary transition-colors" data-icon="credit_card">credit_card</span>
+</button>
+<button class="w-full flex justify-between items-center py-3 px-4 rounded-lg hover:bg-surface-container-high transition-colors text-left group">
+<span class="text-sm font-medium text-on-surface">Email Notifications</span>
+<span class="material-symbols-outlined text-sm text-outline group-hover:text-secondary transition-colors" data-icon="notifications">notifications</span>
+</button>
+<button class="w-full flex justify-between items-center py-3 px-4 rounded-lg hover:bg-surface-container-high transition-colors text-left group">
+<span class="text-sm font-medium text-on-surface">Sustainability Preferences</span>
+<span class="material-symbols-outlined text-sm text-outline group-hover:text-secondary transition-colors" data-icon="eco">eco</span>
+</button>
+</div>
+<div class="mt-8 pt-6 border-t border-outline-variant/10">
+<button class="text-xs font-bold text-error uppercase tracking-widest hover:opacity-70 transition-opacity">Deactivate Account</button>
+</div>
+</div>
+</section>
+</div>
+</main>
+<!-- Footer Section -->
+<footer class="w-full py-12 bg-stone-100 dark:bg-zinc-900">
+<div class="flex flex-col md:flex-row justify-between items-center px-12 gap-6 w-full max-w-screen-2xl mx-auto">
+<div class="text-lg font-bold text-stone-800 dark:text-stone-200">L'ATELIER</div>
+<div class="flex flex-wrap justify-center gap-8">
+<a class="font-['Inter'] text-xs uppercase tracking-widest text-stone-500 dark:text-zinc-500 hover:text-stone-900 dark:hover:text-stone-100 transition-colors" href="#">Sustainability</a>
+<a class="font-['Inter'] text-xs uppercase tracking-widest text-stone-500 dark:text-zinc-500 hover:text-stone-900 dark:hover:text-stone-100 transition-colors" href="#">Shipping</a>
+<a class="font-['Inter'] text-xs uppercase tracking-widest text-stone-500 dark:text-zinc-500 hover:text-stone-900 dark:hover:text-stone-100 transition-colors" href="#">Returns</a>
+<a class="font-['Inter'] text-xs uppercase tracking-widest text-stone-500 dark:text-zinc-500 hover:text-stone-900 dark:hover:text-stone-100 transition-colors" href="#">Privacy Policy</a>
+<a class="font-['Inter'] text-xs uppercase tracking-widest text-stone-500 dark:text-zinc-500 hover:text-stone-900 dark:hover:text-stone-100 transition-colors" href="#">Terms of Service</a>
+</div>
+<div class="font-['Inter'] text-[10px] uppercase tracking-widest text-stone-600 dark:text-zinc-400 opacity-60">
+                © 2024 L'ATELIER DIGITAL. ALL RIGHTS RESERVED.
+            </div>
+</div>
+</footer>
+</body></html>
