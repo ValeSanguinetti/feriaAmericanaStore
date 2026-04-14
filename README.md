@@ -40,6 +40,10 @@ npm run build
 npm run lint
 ```
 
+## Deployment
+
+This project is deployed as a client-side React Router SPA. [vercel.json](/home/alexi-dg/Desktop/GitHub_Repositories/feria-americana-store/vercel.json:1) preserves static assets with a filesystem check first and rewrites unknown routes to `index.html`, which prevents Vercel `404` responses on direct navigation to routes like `/catalog`, `/profile`, `/register`, and `/login`.
+
 ## Integration Notes
 
 The current submit flows are frontend-only by design. To connect a real auth backend, replace the success branches in `RegisterForm` and `LoginForm` with API calls and preserve the existing validation contracts unless product rules change.
