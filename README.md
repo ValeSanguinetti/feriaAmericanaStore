@@ -12,18 +12,16 @@ Frontend prototype for the `Landing Page`, `Home Catalog`, `User Profile`, `Regi
 
 ## Project Structure
 
-- `src/App.tsx`: route definitions and redirects for `/register` and `/login`
-- `src/components/catalog/HomeCatalogPage.tsx`: route `/catalog` with filters, product grid, and pagination shell
-- `src/components/landing/LandingPage.tsx`: route `/` with hero, featured products, and editorial narrative sections
-- `src/components/profile/UserProfilePage.tsx`: route `/profile` with member overview, recent orders, saved pieces, and settings shell
-- `src/components/auth/AuthExperience.tsx`: auth layout shell with shared footer and route-aware styling
-- `src/components/register/RegisterPage.tsx`: register composition and shared footer
-- `src/components/register/RegisterForm.tsx`: controlled register form, validation, and success state
-- `src/components/login/LoginPage.tsx`: login composition and moodboard gallery
-- `src/components/login/LoginForm.tsx`: controlled login form, validation, password visibility, and success state
-- `src/components/shared/SiteFooter.tsx`: shared footer for landing and auth screens
-- `src/index.css`: Tailwind theme tokens, fonts, and minimal global base rules
-- `docs/register-screen-prd.md`: implementation planning document and scope decisions
+- `src/App.tsx`: application composition and bootstrap entrypoint
+- `src/routes/`: route table, metadata, and access guards
+- `src/pages/`: route-level pages for landing, catalog, profile, register, and login
+- `src/components/`: reusable UI sections and form components
+- `src/layouts/`: public, private, and auth shells
+- `src/store/`: session bootstrap and shared app state
+- `src/lib/` and `src/api/`: frontend helpers, validation, navigation, and future HTTP boundaries
+- `src/index.css`: shared theme tokens and base rules
+- `docs/`: technical and maintenance documentation owned by this frontend
+- `prds/`: planning documents and feature/refactor PRDs with numeric prefix convention
 - `stitch_exports/project_12615917652504803710/`: downloaded Stitch HTML and screenshot references
 
 ## Development
