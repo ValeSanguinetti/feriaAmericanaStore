@@ -1,7 +1,18 @@
 {
   "name": "feria-americana-store",
+   "version": "1.0.0",
+  "description": "Feria Americana Store Backend.",
+  "homepage": "https://github.com/ValeSanguinetti/BackendFeriaAmericana#readme",
+  "bugs": {
+    "url": "https://github.com/ValeSanguinetti/BackendFeriaAmericana/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ValeSanguinetti/BackendFeriaAmericana.git"
+  },
+  "license": "MIT",
+  "author": "ValeSanguinetti & Duran24062005",
   "private": true,
-  "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
