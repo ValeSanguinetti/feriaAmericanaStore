@@ -1,49 +1,53 @@
-import loginDetail1 from '../../assets/login-detail-1.png'
-import loginDetail2 from '../../assets/login-detail-2.png'
-import loginDetail3 from '../../assets/login-detail-3.png'
+import loginBackgroundTexture from '../../assets/login-background-texture.jpg'
 import { LoginForm } from '../../components/auth/LoginForm'
 
-const loginGallery = [
-  {
-    alt: 'Close-up of textured beige wool fabric in soft studio light',
-    src: loginDetail1,
-  },
-  {
-    alt: 'Minimal fashion portrait in white linen against a neutral stone backdrop',
-    src: loginDetail2,
-  },
-  {
-    alt: 'Curated row of designer garments in a quiet boutique interior',
-    src: loginDetail3,
-  },
+const footerLinks = [
+  'Shipping',
+  'Returns',
+  'Privacy',
+  'Contact',
+  'Sustainability',
 ]
 
 export default function LoginPage() {
   return (
-    <>
-      <header className="sticky top-0 z-10 flex justify-center bg-background/85 px-6 py-6 backdrop-blur">
-        <div className="font-headline text-[2rem] font-extrabold tracking-[-0.05em] text-headline">
-          L&apos;ATELIER
-        </div>
-      </header>
-
-      <main className="flex flex-1 items-center justify-center px-6 pt-5 pb-16">
-        <section className="grid w-full max-w-[34rem] gap-6" aria-labelledby="login-title">
+    <div className="relative flex min-h-svh flex-1 flex-col overflow-hidden bg-[#fff8f7] text-[#241919]">
+      <main className="relative z-10 flex flex-1 items-center justify-center px-4 py-12 sm:px-6 md:px-16 md:py-20">
+        <section className="w-full max-w-[30rem]" aria-labelledby="login-title">
           <LoginForm />
-
-          <div className="grid grid-cols-3 gap-3" aria-label="Brand moodboard">
-            {loginGallery.map((image) => (
-              <div key={image.alt} className="aspect-square overflow-hidden rounded-2xl bg-surface-muted">
-                <img
-                  alt={image.alt}
-                  className="h-full w-full object-cover grayscale opacity-70"
-                  src={image.src}
-                />
-              </div>
-            ))}
-          </div>
         </section>
       </main>
-    </>
+
+      <footer className="relative z-10 grid gap-6 border-t border-[#e5d0d0] bg-[#faf7f7] px-6 py-8 md:grid-cols-[auto_1fr_auto] md:items-center md:px-16 md:py-10">
+        <div className="text-center text-[0.68rem] font-bold uppercase tracking-[0.28em] text-[#241919] md:text-left">
+          Feria Americana
+        </div>
+
+        <nav className="flex flex-wrap justify-center gap-x-6 gap-y-3" aria-label="Footer">
+          {footerLinks.map((link) => (
+            <a
+              key={link}
+              className="text-[0.58rem] uppercase tracking-[0.24em] text-[#9a8b8b] no-underline transition-colors hover:text-[#6b0119]"
+              href="/"
+            >
+              {link}
+            </a>
+          ))}
+        </nav>
+
+        <div className="text-center text-[0.58rem] uppercase tracking-[0.24em] text-[#9a8b8b] md:text-right">
+          &copy; 2024 Feria Americana. Curated quality.
+        </div>
+      </footer>
+
+      <div className="pointer-events-none absolute inset-x-0 bottom-0 z-0 h-[26rem] overflow-hidden opacity-35">
+        <div className="absolute inset-0 bg-gradient-to-t from-[#8b1e2d]/10 to-transparent" />
+        <img
+          alt="Abstract fashion fabric texture with soft shadows in beige and deep red tones"
+          className="h-full w-full object-cover mix-blend-multiply"
+          src={loginBackgroundTexture}
+        />
+      </div>
+    </div>
   )
 }

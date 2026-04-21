@@ -1,7 +1,6 @@
 import { Link } from 'react-router-dom'
 import { useRegisterForm } from '../../hooks/useRegisterForm'
 import { InlineNotice } from '../ui/InlineNotice'
-import { TextField } from '../ui/TextField'
 
 export function RegisterForm() {
   const {
@@ -15,115 +14,197 @@ export function RegisterForm() {
   } = useRegisterForm()
 
   return (
-    <div className="grid w-full max-w-[34rem] gap-8">
-      <div className="grid gap-2.5">
-        <p className="m-0 text-[0.78rem] font-semibold uppercase tracking-[0.22em] text-accent">
-          Membership registration
-        </p>
+    <div className="w-full">
+      <div className="mb-12">
         <h2
           id="register-title"
-          className="m-0 font-headline text-[clamp(2.6rem,5vw,3.8rem)] leading-[0.98] font-extrabold tracking-[-0.06em] text-headline"
+          className="m-0 text-[2rem] font-semibold text-[#241919] sm:text-[2.15rem]"
         >
-          Create account
+          Create Account
         </h2>
-        <p className="m-0 text-base text-text-muted">
-          Become a part of the L&apos;ATELIER movement.
+        <p className="m-0 mt-2 text-[1rem] text-[#574142]">
+          Experience fashion curated for you.
         </p>
       </div>
 
       <form className="grid gap-6" onSubmit={handleSubmit} noValidate>
-        <div className="grid gap-5">
-          <TextField
-            error={errors.name}
-            id="full-name"
-            label="Name"
-            name="name"
-            placeholder="Enter your full name"
-            value={values.name}
-            onBlur={() => handleBlur('name')}
-            onChange={(event) => updateValue(event, 'name')}
-          />
-
-          <TextField
-            error={errors.email}
-            id="email"
-            label="Email Address"
-            name="email"
-            placeholder="name@example.com"
-            type="email"
-            value={values.email}
-            onBlur={() => handleBlur('email')}
-            onChange={(event) => updateValue(event, 'email')}
-          />
-
-          <div className="grid gap-4 md:grid-cols-2">
-            <TextField
-              error={errors.password}
-              id="password"
-              label="Password"
-              name="password"
-              placeholder="At least 8 characters"
-              type="password"
-              value={values.password}
-              onBlur={() => handleBlur('password')}
-              onChange={(event) => updateValue(event, 'password')}
+        <div className="space-y-5">
+          <label className="grid gap-2" htmlFor="full-name">
+            <span className="text-[0.62rem] uppercase tracking-[0.16em] text-[#574142]">
+              Full Name
+            </span>
+            <input
+              aria-describedby={errors.name ? 'full-name-error' : undefined}
+              aria-invalid={Boolean(errors.name)}
+              aria-label="Name"
+              className={`h-12 w-full rounded-[4px] border bg-white px-4 text-[0.92rem] uppercase tracking-[0.03em] text-[#241919] outline-none transition focus:border-[#241919] ${
+                errors.name ? 'border-[#ba1a1a] bg-[#fff3f1]' : 'border-[#debfbf]'
+              }`}
+              id="full-name"
+              name="name"
+              placeholder="ALEXANDER VOGUE"
+              value={values.name}
+              onBlur={() => handleBlur('name')}
+              onChange={(event) => updateValue(event, 'name')}
             />
+            {errors.name ? (
+              <p className="m-0 text-[0.76rem] text-[#ba1a1a]" id="full-name-error" role="alert">
+                {errors.name}
+              </p>
+            ) : null}
+          </label>
 
-            <TextField
-              error={errors.confirmPassword}
+          <label className="grid gap-2" htmlFor="email">
+            <span className="text-[0.62rem] uppercase tracking-[0.16em] text-[#574142]">
+              Email Address
+            </span>
+            <input
+              aria-describedby={errors.email ? 'email-error' : undefined}
+              aria-invalid={Boolean(errors.email)}
+              className={`h-12 w-full rounded-[4px] border bg-white px-4 text-[0.92rem] uppercase tracking-[0.03em] text-[#241919] outline-none transition focus:border-[#241919] ${
+                errors.email ? 'border-[#ba1a1a] bg-[#fff3f1]' : 'border-[#debfbf]'
+              }`}
+              id="email"
+              name="email"
+              placeholder="CURATED@FERIA.COM"
+              type="email"
+              value={values.email}
+              onBlur={() => handleBlur('email')}
+              onChange={(event) => updateValue(event, 'email')}
+            />
+            {errors.email ? (
+              <p className="m-0 text-[0.76rem] text-[#ba1a1a]" id="email-error" role="alert">
+                {errors.email}
+              </p>
+            ) : null}
+          </label>
+
+          <label className="grid gap-2" htmlFor="password">
+            <span className="text-[0.62rem] uppercase tracking-[0.16em] text-[#574142]">
+              Password
+            </span>
+            <span className="relative block">
+              <input
+                aria-describedby={errors.password ? 'password-error' : undefined}
+                aria-invalid={Boolean(errors.password)}
+                aria-label="Password"
+                className={`h-12 w-full rounded-[4px] border bg-white px-4 pr-12 text-[0.92rem] text-[#241919] outline-none transition focus:border-[#241919] ${
+                  errors.password ? 'border-[#ba1a1a] bg-[#fff3f1]' : 'border-[#debfbf]'
+                }`}
+                id="password"
+                name="password"
+                placeholder="••••••••"
+                type="password"
+                value={values.password}
+                onBlur={() => handleBlur('password')}
+                onChange={(event) => updateValue(event, 'password')}
+              />
+              <span
+                aria-hidden="true"
+                className="absolute top-1/2 right-4 -translate-y-1/2 text-[0.9rem] text-[#574142]"
+              >
+                View
+              </span>
+            </span>
+            {errors.password ? (
+              <p className="m-0 text-[0.76rem] text-[#ba1a1a]" id="password-error" role="alert">
+                {errors.password}
+              </p>
+            ) : null}
+          </label>
+
+          <label className="grid gap-2" htmlFor="confirm-password">
+            <span className="text-[0.62rem] uppercase tracking-[0.16em] text-[#574142]">
+              Confirm Password
+            </span>
+            <input
+              aria-describedby={errors.confirmPassword ? 'confirm-password-error' : undefined}
+              aria-invalid={Boolean(errors.confirmPassword)}
+              aria-label="Confirm"
+              className={`h-12 w-full rounded-[4px] border bg-white px-4 text-[0.92rem] text-[#241919] outline-none transition focus:border-[#241919] ${
+                errors.confirmPassword ? 'border-[#ba1a1a] bg-[#fff3f1]' : 'border-[#debfbf]'
+              }`}
               id="confirm-password"
-              label="Confirm"
               name="confirmPassword"
-              placeholder="Repeat your password"
+              placeholder="••••••••"
               type="password"
               value={values.confirmPassword}
               onBlur={() => handleBlur('confirmPassword')}
               onChange={(event) => updateValue(event, 'confirmPassword')}
             />
-          </div>
+            {errors.confirmPassword ? (
+              <p
+                className="m-0 text-[0.76rem] text-[#ba1a1a]"
+                id="confirm-password-error"
+                role="alert"
+              >
+                {errors.confirmPassword}
+              </p>
+            ) : null}
+          </label>
         </div>
 
-        <label
-          className={`grid grid-cols-[auto_1fr] items-start gap-3 rounded-2xl border bg-white/70 px-4 py-4 ${
-            errors.acceptedTerms ? 'border-danger/30' : 'border-black/10'
-          }`}
-        >
+        <label className="flex items-start gap-3 py-2" htmlFor="terms">
           <input
+            aria-describedby={errors.acceptedTerms ? 'terms-error' : undefined}
             checked={values.acceptedTerms}
-            className="mt-0.5 h-4 w-4 accent-accent"
+            className="mt-1 h-4 w-4 rounded border-[#debfbf] accent-[#8b1e2d]"
+            id="terms"
             name="acceptedTerms"
             type="checkbox"
             onBlur={() => handleBlur('acceptedTerms')}
             onChange={(event) => updateValue(event, 'acceptedTerms')}
           />
-          <span className="text-[0.95rem] leading-6 text-text-muted">
-            I agree to the <a href="/">Terms of Service</a> and{' '}
-            <a href="/">Privacy Policy</a>.
+          <span className="text-[0.88rem] leading-5 text-[#574142]">
+            I agree to the{' '}
+            <a
+              className="font-semibold text-[#8b1e2d] underline underline-offset-4"
+              href="/"
+            >
+              Terms of Service
+            </a>{' '}
+            and{' '}
+            <a
+              className="font-semibold text-[#8b1e2d] underline underline-offset-4"
+              href="/"
+            >
+              Privacy Policy
+            </a>
+            .
           </span>
         </label>
 
         {errors.acceptedTerms ? (
-          <p className="m-0 text-[0.82rem] text-danger" role="alert">
+          <p className="m-0 text-[0.76rem] text-[#ba1a1a]" id="terms-error" role="alert">
             {errors.acceptedTerms}
           </p>
         ) : null}
 
-        <div className="grid gap-4">
+        <div className="grid gap-6">
           <button
-            className="inline-flex items-center justify-center rounded-full bg-accent bg-[linear-gradient(135deg,#76551a_0%,#5e4312_100%)] px-6 py-4 text-[0.82rem] font-bold uppercase tracking-[0.2em] text-[#fffaf4] shadow-panel transition hover:-translate-y-px hover:brightness-105"
+            className="mt-2 h-14 w-full rounded-lg bg-[#8b1e2d] text-[0.78rem] font-semibold uppercase tracking-[0.22em] text-white transition duration-300 hover:bg-[#6b0119] active:scale-[0.98]"
             type="submit"
           >
             Create account
           </button>
-          <p className="m-0 text-center text-text-muted">
-            Already have an account?{' '}
+
+          <div className="border-t border-[#debfbf] pt-6 text-center">
+            <p className="m-0 text-[1rem] text-[#574142]">
+              Already have an account?
+            </p>
             <Link
-              className="font-semibold text-headline underline decoration-accent/35 underline-offset-4"
+              className="ml-1 font-bold uppercase text-[#241919] no-underline transition-colors hover:text-[#8b1e2d]"
               to="/login"
             >
-              Log in
+              Login
             </Link>
-          </p>
+          </div>
+        </div>
+
+        <div className="flex justify-center gap-6 text-[#8b7171]">
+          <span aria-hidden="true">Verified</span>
+          <span aria-hidden="true">Premium</span>
+          <span aria-hidden="true">Eco</span>
         </div>
       </form>
 
@@ -131,7 +212,7 @@ export function RegisterForm() {
         <InlineNotice
           action={
             <button
-              className="rounded-full bg-success-text/10 px-4 py-3 font-semibold"
+              className="rounded-sm bg-success-text/10 px-4 py-3 font-semibold"
               type="button"
               onClick={reset}
             >

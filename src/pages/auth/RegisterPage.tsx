@@ -1,53 +1,52 @@
-import editorialImage from '../../assets/register-editorial.png'
+import editorialImage from '../../assets/register-editorial-stitch.jpg'
 import { RegisterForm } from '../../components/auth/RegisterForm'
-
-const featurePills = ['Sustainable', 'Ethical', 'Timeless']
 
 export default function RegisterPage() {
   return (
-    <main className="grid min-h-[720px] flex-1 grid-cols-1 md:grid-cols-[minmax(320px,0.95fr)_minmax(320px,1.05fr)]">
-      <aside className="relative flex min-h-[480px] flex-col justify-between overflow-hidden bg-[linear-gradient(180deg,rgba(255,255,255,0.3),rgba(239,230,220,0.7)),#efe8e2] px-5 py-8 after:pointer-events-none after:absolute after:inset-0 after:bg-[linear-gradient(180deg,rgba(20,15,12,0.1),rgba(20,15,12,0.28))] md:min-h-[720px] md:p-12">
-        <div className="relative z-10 font-headline text-[1.85rem] font-extrabold tracking-[-0.04em] text-headline">
-          L&apos;ATELIER
-        </div>
+    <div className="flex min-h-svh flex-1 flex-col bg-[#fff8f7] text-[#241919]">
+      <main className="flex min-h-svh flex-1 flex-col md:flex-row">
+        <section className="relative hidden items-center justify-center overflow-hidden bg-zinc-100 md:flex md:w-1/2 lg:w-3/5">
+          <img
+            alt="High-fashion editorial portrait of a woman in a structural red coat standing against a minimalist beige concrete wall"
+            className="absolute inset-0 h-full w-full object-cover grayscale-[20%]"
+            src={editorialImage}
+          />
+          <div className="absolute inset-0 bg-[#6b0119]/20 mix-blend-multiply" />
+          <div className="relative z-10 flex max-w-xl flex-col items-center px-12 text-center text-white">
+            <h1 className="m-0 text-[clamp(3.5rem,6vw,5.2rem)] font-black uppercase tracking-[-0.06em] drop-shadow-xl">
+              Feria Americana
+            </h1>
+            <p className="mt-4 mb-0 text-[1.05rem] leading-8 tracking-[0.02em] text-white/95">
+              Curated Quality. Timeless Style. Join our editorial community of vintage
+              connoisseurs.
+            </p>
+          </div>
+        </section>
 
-        <div className="relative z-10 grid max-w-[28rem] gap-5">
-          <span className="text-[0.72rem] font-semibold uppercase tracking-[0.24em] text-accent">
-            New Member Exclusive
+        <section className="flex flex-1 items-center justify-center bg-[#fff8f7] px-6 py-16 md:px-16 md:py-20">
+          <div className="w-full max-w-md">
+            <div className="mb-12 text-center md:hidden">
+              <h1 className="m-0 text-[2rem] font-black uppercase tracking-[-0.05em] text-[#574142]">
+                Feria Americana
+              </h1>
+            </div>
+
+            <RegisterForm />
+          </div>
+        </section>
+      </main>
+
+      <footer className="w-full border-t border-zinc-100 bg-zinc-50 py-2 md:fixed md:bottom-0">
+        <div className="mx-auto flex max-w-[1440px] flex-col items-center justify-between gap-3 px-6 opacity-40 md:flex-row md:px-16">
+          <span className="text-[0.58rem] uppercase tracking-[0.24em]">
+            &copy; 2024 Feria Americana. Curated quality.
           </span>
-          <h1 className="m-0 max-w-[12ch] font-headline text-[clamp(3rem,6vw,4.8rem)] leading-[0.94] font-extrabold tracking-[-0.06em] text-headline">
-            Join our curated community.
-          </h1>
-          <p className="m-0 max-w-[24rem] text-[1.05rem] leading-[1.8] text-headline/80">
-            Gain early access to seasonal collections, sustainable lookbooks, and exclusive
-            archival pieces crafted for the modern individual.
-          </p>
+          <div className="flex gap-6 text-[0.58rem] uppercase tracking-[0.24em]">
+            <span>Sustainability</span>
+            <span>Privacy</span>
+          </div>
         </div>
-
-        <img
-          alt="Editorial fashion still life with neutral tones and soft shadows"
-          className="absolute inset-0 h-full w-full object-cover opacity-35 mix-blend-multiply grayscale"
-          src={editorialImage}
-        />
-
-        <div
-          aria-label="Brand values"
-          className="relative z-10 flex flex-wrap gap-3 text-xs font-semibold uppercase tracking-[0.2em] text-headline/70"
-        >
-          {featurePills.map((pill) => (
-            <span key={pill} className="inline-flex items-center gap-3">
-              {pill}
-            </span>
-          ))}
-        </div>
-      </aside>
-
-      <section
-        aria-labelledby="register-title"
-        className="flex items-center justify-center bg-[radial-gradient(circle_at_top_right,rgba(118,85,26,0.08),transparent_26%),#fcf9f8] px-5 py-8 md:p-12"
-      >
-        <RegisterForm />
-      </section>
-    </main>
+      </footer>
+    </div>
   )
 }

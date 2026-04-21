@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-secondary-fixed-variant": "#891a2c",
+                    "error": "#ba1a1a",
+                    "on-primary-fixed": "#40000b",
+                    "on-secondary-fixed": "#40000c",
+                    "primary-fixed": "#ffdada",
+                    "on-background": "#241919",
+                    "inverse-primary": "#ffb3b4",
+                    "tertiary-container": "#4e4749",
+                    "tertiary": "#373132",
+                    "surface-bright": "#fff8f7",
+                    "primary-fixed-dim": "#ffb3b4",
+                    "outline-variant": "#debfbf",
+                    "on-surface": "#241919",
+                    "inverse-surface": "#3a2d2d",
+                    "on-surface-variant": "#574142",
+                    "error-container": "#ffdad6",
+                    "on-tertiary-fixed": "#201a1c",
+                    "on-primary-fixed-variant": "#881c2b",
+                    "surface-variant": "#f3dddd",
+                    "tertiary-fixed-dim": "#cfc4c6",
+                    "secondary": "#a93342",
+                    "background": "#fff8f7",
+                    "surface-container-low": "#fff0f0",
+                    "tertiary-fixed": "#ebe0e2",
+                    "on-primary": "#ffffff",
+                    "primary-container": "#8b1e2d",
+                    "on-primary-container": "#ff9da0",
+                    "on-secondary-container": "#73061e",
+                    "outline": "#8b7171",
+                    "inverse-on-surface": "#ffedec",
+                    "on-secondary": "#ffffff",
+                    "secondary-fixed": "#ffdada",
+                    "surface": "#fff8f7",
+                    "secondary-fixed-dim": "#ffb3b5",
+                    "surface-container-high": "#f9e3e3",
+                    "surface-container-highest": "#f3dddd",
+                    "on-tertiary-container": "#c0b5b7",
+                    "on-tertiary": "#ffffff",
+                    "surface-tint": "#a93441",
+                    "on-error-container": "#93000a",
+                    "surface-container": "#ffe9e8",
+                    "on-error": "#ffffff",
+                    "on-tertiary-fixed-variant": "#4c4547",
+                    "secondary-container": "#ff7480",
+                    "surface-dim": "#ebd5d5",
+                    "surface-container-lowest": "#ffffff",
+                    "primary": "#6b0119"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "stack-lg": "48px",
+                    "stack-sm": "8px",
+                    "section-padding": "80px",
+                    "margin-desktop": "64px",
+                    "base": "8px",
+                    "margin-mobile": "16px",
+                    "stack-md": "24px",
+                    "gutter": "24px",
+                    "container-max": "1440px"
+            },
+            "fontFamily": {
+                    "label-md": ["Manrope"],
+                    "headline-lg": ["Manrope"],
+                    "body-md": ["Manrope"],
+                    "body-lg": ["Manrope"],
+                    "label-sm": ["Manrope"],
+                    "headline-md": ["Manrope"],
+                    "display-xl": ["Manrope"]
+            },
+            "fontSize": {
+                    "label-md": ["14px", {"lineHeight": "1.0", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "headline-lg": ["32px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "label-sm": ["12px", {"lineHeight": "1.0", "letterSpacing": "0.03em", "fontWeight": "500"}],
+                    "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                    "display-xl": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background-color: #fff8f7;
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+<body class="font-body-md text-on-background">
+<!-- TopAppBar Shared Component -->
+<header class="bg-white dark:bg-neutral-950 border-b border-neutral-200 dark:border-neutral-800 fixed top-0 w-full z-50">
+<div class="flex justify-between items-center px-16 py-6 max-w-[1440px] mx-auto font-manrope antialiased tracking-tight">
+<div class="text-2xl font-black tracking-tighter text-[#8B1E2D] dark:text-red-500 uppercase cursor-pointer transition-all active:scale-95">
+                Feria Americana
+            </div>
+<nav class="hidden md:flex items-center space-x-8">
+<a class="text-neutral-500 dark:text-neutral-400 hover:text-[#8B1E2D] cursor-pointer transition-all active:scale-95" href="#">Shop</a>
+<a class="text-neutral-500 dark:text-neutral-400 hover:text-[#8B1E2D] cursor-pointer transition-all active:scale-95" href="#">Wishlist</a>
+<a class="text-neutral-500 dark:text-neutral-400 hover:text-[#8B1E2D] cursor-pointer transition-all active:scale-95" href="#">New Arrivals</a>
+<a class="text-neutral-500 dark:text-neutral-400 hover:text-[#8B1E2D] cursor-pointer transition-all active:scale-95" href="#">Collections</a>
+</nav>
+<div class="flex items-center space-x-6">
+<div class="cursor-pointer transition-all active:scale-95 hover:opacity-80 transition-opacity duration-200 text-[#8B1E2D]">
+<span class="material-symbols-outlined" data-icon="shopping_bag" style="font-variation-settings: 'FILL' 1;">shopping_bag</span>
+</div>
+<div class="cursor-pointer transition-all active:scale-95 hover:opacity-80 transition-opacity duration-200 text-[#8B1E2D]">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+</div>
+</div>
+</div>
+</header>
+<main class="pt-[120px] pb-section-padding px-margin-desktop max-w-container-max mx-auto">
+<div class="mb-stack-lg">
+<h1 class="font-display-xl text-display-xl text-on-surface">Your Shopping Bag</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mt-2">Carefully curated selections for your collection.</p>
+</div>
+<div class="grid grid-cols-12 gap-gutter">
+<!-- Items List -->
+<div class="col-span-12 lg:col-span-8 space-y-stack-md">
+<!-- Item Card 1 -->
+<div class="flex flex-col sm:flex-row gap-stack-md bg-white border border-[#EAEAEA] p-stack-md rounded">
+<div class="w-full sm:w-40 h-48 bg-surface-container overflow-hidden">
+<img alt="Vintage Overcoat" class="w-full h-full object-cover" data-alt="high-end vintage wool overcoat in deep charcoal grey hanging in a minimalist luxury boutique with soft ambient lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBjv-_1Qj7q13gJ62uT9QoLmoBefBjGddXM8s6rSfO9Y_5YLCeH-MKksxO09QFkc1HmtB4NPh45a9eSx-yrAnorC7SRm09bTOluLr9AGM4f4umyHPyshaOvAslFSSq9u4Vdb_2PnWygpd1JxAWjMfCp47kuRikSX2sNLvo2INpKZ0COHtA-BXISUOOrsn0dHZHA3ghAZ6QdwDzSY1NWNs0kmtk0kT8aPw_VO16MUMLYB2ns-mEAeKO4Jz-Rqwo7saYA2ifr0SyY1mmY"/>
+</div>
+<div class="flex-1 flex flex-col justify-between">
+<div class="flex justify-between items-start">
+<div>
+<p class="font-label-sm text-label-sm uppercase text-secondary mb-1">Vintage Collection</p>
+<h3 class="font-headline-md text-headline-md text-on-surface">Structured Wool Overcoat</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Midnight Blue | Size L</p>
+</div>
+<button class="text-on-surface-variant hover:text-error transition-colors">
+<span class="material-symbols-outlined" data-icon="delete">delete</span>
+</button>
+</div>
+<div class="flex justify-between items-end mt-4">
+<div class="flex items-center border border-[#EAEAEA] rounded">
+<button class="px-3 py-1 hover:bg-surface-container transition-colors">-</button>
+<span class="px-4 py-1 font-label-md text-label-md">1</span>
+<button class="px-3 py-1 hover:bg-surface-container transition-colors">+</button>
+</div>
+<span class="font-headline-md text-headline-md text-primary-container">$345.00</span>
+</div>
+</div>
+</div>
+<!-- Item Card 2 -->
+<div class="flex flex-col sm:flex-row gap-stack-md bg-white border border-[#EAEAEA] p-stack-md rounded">
+<div class="w-full sm:w-40 h-48 bg-surface-container overflow-hidden">
+<img alt="Leather Boots" class="w-full h-full object-cover" data-alt="hand-crafted premium leather chelsea boots on a clean white pedestal with dramatic studio lighting and sharp shadows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDzHokF-H2-Y3B40jlJVjn4yQM0anV5BHhbtO2E6egwXMsj4uKNQfW_xCao7oJuef6_oRWOqig9a3HL3NHZfybih3x9w4i6nSZWup19QhQ473jpUzyzCS4IuZuYa0s7earPYfXoqfV7sM1yM0l6LIuLlNo1KknsyQ60FPS6aPVewIo50eWNv6uLAqSbgf4Ajc3aRLsNEC65WTdVYx8RZ15pZUeN1RBddIA4xmC9Rff32wQ1UjdGwsjYyCDzCF7z-2L_jGRvWjes1Xul"/>
+</div>
+<div class="flex-1 flex flex-col justify-between">
+<div class="flex justify-between items-start">
+<div>
+<p class="font-label-sm text-label-sm uppercase text-secondary mb-1">Footwear</p>
+<h3 class="font-headline-md text-headline-md text-on-surface">Artisan Chelsea Boots</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Cognac Leather | Size 42</p>
+</div>
+<button class="text-on-surface-variant hover:text-error transition-colors">
+<span class="material-symbols-outlined" data-icon="delete">delete</span>
+</button>
+</div>
+<div class="flex justify-between items-end mt-4">
+<div class="flex items-center border border-[#EAEAEA] rounded">
+<button class="px-3 py-1 hover:bg-surface-container transition-colors">-</button>
+<span class="px-4 py-1 font-label-md text-label-md">1</span>
+<button class="px-3 py-1 hover:bg-surface-container transition-colors">+</button>
+</div>
+<span class="font-headline-md text-headline-md text-primary-container">$280.00</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Summary Column -->
+<div class="col-span-12 lg:col-span-4">
+<div class="bg-white border border-[#EAEAEA] p-stack-md rounded sticky top-[120px]">
+<h2 class="font-headline-md text-headline-md text-on-surface mb-stack-md">Order Summary</h2>
+<div class="space-y-4 mb-stack-md">
+<div class="flex justify-between font-body-md text-body-md">
+<span class="text-on-surface-variant">Subtotal</span>
+<span class="text-on-surface">$625.00</span>
+</div>
+<div class="flex justify-between font-body-md text-body-md">
+<span class="text-on-surface-variant">Estimated Shipping</span>
+<span class="text-on-surface">$15.00</span>
+</div>
+<div class="flex justify-between font-body-md text-body-md">
+<span class="text-on-surface-variant">Tax</span>
+<span class="text-on-surface">$50.00</span>
+</div>
+<div class="pt-4 border-t border-[#EAEAEA] flex justify-between font-headline-lg text-headline-lg">
+<span class="text-on-surface">Total</span>
+<span class="text-primary-container">$690.00</span>
+</div>
+</div>
+<div class="mb-stack-md">
+<label class="font-label-sm text-label-sm uppercase text-on-surface-variant mb-2 block">Promo Code</label>
+<div class="flex gap-2">
+<input class="flex-1 bg-white border border-[#EAEAEA] px-4 py-2 text-body-md focus:border-on-surface outline-none transition-colors" placeholder="Enter code" type="text"/>
+<button class="border border-on-surface px-4 py-2 font-label-md text-label-md hover:bg-on-surface hover:text-white transition-all">Apply</button>
+</div>
+</div>
+<button class="w-full bg-[#8B1E2D] text-white py-4 font-label-md text-label-md uppercase tracking-widest hover:opacity-90 active:scale-95 transition-all rounded-sm shadow-sm mb-4">
+                        Proceed to Checkout
+                    </button>
+<div class="flex items-center justify-center gap-2 text-on-surface-variant">
+<span class="material-symbols-outlined text-sm" data-icon="lock">lock</span>
+<span class="font-label-sm text-label-sm">Secure Checkout Guaranteed</span>
+</div>
+<div class="mt-8 pt-6 border-t border-[#EAEAEA]">
+<p class="font-label-sm text-label-sm uppercase text-on-surface-variant mb-4">We Accept</p>
+<div class="flex gap-4 opacity-60 grayscale hover:grayscale-0 transition-all duration-300">
+<span class="material-symbols-outlined text-3xl" data-icon="credit_card">credit_card</span>
+<span class="material-symbols-outlined text-3xl" data-icon="account_balance_wallet">account_balance_wallet</span>
+<span class="material-symbols-outlined text-3xl" data-icon="contactless">contactless</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Related Items Section (Editorial Feel) -->
+<section class="mt-section-padding">
+<h2 class="font-display-xl text-headline-lg text-on-surface mb-stack-lg border-b border-[#EAEAEA] pb-4">Complete the Look</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter">
+<!-- Related Card 1 -->
+<div class="group cursor-pointer">
+<div class="aspect-[3/4] overflow-hidden bg-surface-container-low mb-4">
+<img alt="Silk Scarf" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="fine silk scarf with abstract artistic pattern in earthy tones draped over a minimalist wooden chair with sharp shadows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBPVLxN1tzvb1hQIMC7GbgmSemQYXsPZKwxomN6tPIqVNou4ufu-Z1l9BSdAIaqUgUDyZm5rwp-TBQ5mK9ee-7T-nZ6d_ZFRHDW7TDKrX06bbS6JaelqXXC51HFPkt6zcX1iVb6RPQhcHRB5CZatT39VJvmKHQKBU_yIB9ywZID7ZZiqNAgKr9NaIMgIk8HsC3qw5fj1ltTgLl8KAMr2DEJwpcv4Dt7tSv53UKhkslGIf_dH4yjOC5c4dtu6bd-GD-py4U8G8-2Ewgf"/>
+</div>
+<p class="font-body-md text-body-md text-on-surface mb-1">Hand-Painted Silk Scarf</p>
+<p class="font-headline-md text-headline-md text-on-surface">$120.00</p>
+</div>
+<!-- Related Card 2 -->
+<div class="group cursor-pointer">
+<div class="aspect-[3/4] overflow-hidden bg-surface-container-low mb-4">
+<img alt="Fedora Hat" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="classic wide brim felt fedora hat in olive green sitting on a dark marble tabletop with warm spotlighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD5Pwwwo6pKfBssdcfotvF3DBv9o1NKaypDcG8UCXTr3jrNcBCO-xyvXnjv03JT8aRYQ2AE7AC6RxkgXpnqM8GPrUzS53_B1fs02Nh15LdyAXRC_nmlsOPOoirWZInWY5kxf59QDhC8CtCmDbBwGwPFcDCpjWAUnaRcNPdmFGPjdkGKAgskixHqZAMnMvnjRwMRdQ3j8EbVyDoZpeKZpPlvIWMcqubbm6hJa4g1nO0TAwdDk6gP5oHPRHnBoMSRonoay-rpvcP-NVWl"/>
+</div>
+<p class="font-body-md text-body-md text-on-surface mb-1">Wide-Brim Felt Fedora</p>
+<p class="font-headline-md text-headline-md text-on-surface">$185.00</p>
+</div>
+<!-- Related Card 3 -->
+<div class="group cursor-pointer">
+<div class="aspect-[3/4] overflow-hidden bg-surface-container-low mb-4">
+<img alt="Cotton Shirt" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="crisp white tailored organic cotton shirt meticulously folded on a minimalist wooden surface with soft daylight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuABSyPj2nDG1fzC94Lt5s_4uXqjbeiSZvICGAyEk-WM_2R0gznDTQvGNV68ULZSvdpi96HE4JLvQTx7uE1sooJZmZTJUub3vJtqkYAyJ-DMS2YOsO05ljE2vX-oKSEfzZoKEG1n78dCp6GNWgcYRRi0-zhVWGGq0Tgk8rCs1zv2TfH7i_Ha9xW-2ko451gwYivwSkTMnKD3f0F1xwuYbA9F3TwQHo7pTA_8JmWK2UXY7YsYIePNX9Ow6G-OS9GIqyODxtIDjTIPkHrc"/>
+</div>
+<p class="font-body-md text-body-md text-on-surface mb-1">Organic Cotton Tailored Shirt</p>
+<p class="font-headline-md text-headline-md text-on-surface">$145.00</p>
+</div>
+<!-- Related Card 4 -->
+<div class="group cursor-pointer">
+<div class="aspect-[3/4] overflow-hidden bg-surface-container-low mb-4">
+<img alt="Leather Bag" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="luxury minimal leather tote bag in deep burgundy leaning against a concrete wall with architectural shadows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD5UTUYLFaY5YGNtQoMvuOSDa16iZXq8-SePRTkP1LPNUnquDST3XcjFRqwv2Eo1pSTyPL1HeSgz8z4viUij21qscAhipSw5UG9844QsRE6Mdwaqr5DCMg_PROR2KemJ-Vb8wGqatuKpgXMDfx9awZZzmwPaDgs8hZW2AIK-CSnonmC5lnHEI0CQ09MzZYvvd4ZV9fVuBMjdpyhEG4u1yJ98naDeaPnQWStKCt1P-6iz6hwN7QK-TJmdBUH8Nb75J-7_5n27jJOVS3o"/>
+</div>
+<p class="font-body-md text-body-md text-on-surface mb-1">Structured Leather Tote</p>
+<p class="font-headline-md text-headline-md text-on-surface">$420.00</p>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer Shared Component -->
+<footer class="w-full mt-20 border-t border-neutral-200 dark:border-neutral-800 bg-white dark:bg-neutral-950 font-manrope">
+<div class="flex flex-col md:flex-row justify-between items-center px-16 py-12 max-w-[1440px] mx-auto space-y-4 md:space-y-0">
+<div class="text-lg font-bold text-[#1A1A1A] dark:text-white">
+                Feria Americana
+            </div>
+<div class="flex flex-wrap justify-center gap-8 text-sm tracking-wide uppercase">
+<a class="text-neutral-500 dark:text-neutral-400 hover:text-[#1A1A1A] dark:hover:text-white transition-colors ease-in-out duration-200" href="#">Privacy Policy</a>
+<a class="text-neutral-500 dark:text-neutral-400 hover:text-[#1A1A1A] dark:hover:text-white transition-colors ease-in-out duration-200" href="#">Terms of Service</a>
+<a class="text-neutral-500 dark:text-neutral-400 hover:text-[#1A1A1A] dark:hover:text-white transition-colors ease-in-out duration-200" href="#">Shipping &amp; Returns</a>
+<a class="text-neutral-500 dark:text-neutral-400 hover:text-[#1A1A1A] dark:hover:text-white transition-colors ease-in-out duration-200" href="#">Contact Us</a>
+</div>
+<div class="text-neutral-500 dark:text-neutral-400 text-sm uppercase tracking-wide">
+                © 2024 Feria Americana. Curated Quality.
+            </div>
+</div>
+</footer>
+</body></html>

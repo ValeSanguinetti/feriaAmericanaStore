@@ -1,4 +1,12 @@
-export type AppRouteKey = 'landing' | 'catalog' | 'profile' | 'login' | 'register'
+export type AppRouteKey =
+  | 'landing'
+  | 'catalog'
+  | 'product-detail'
+  | 'shopping-cart'
+  | 'wishlist'
+  | 'profile'
+  | 'login'
+  | 'register'
 
 export type NavigationItem = {
   activeOn: AppRouteKey[]

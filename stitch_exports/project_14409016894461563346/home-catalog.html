@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>FERIA AMERICANA | Catalog</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-primary": "#ffffff",
+                    "surface-tint": "#a93441",
+                    "on-primary-fixed": "#40000b",
+                    "on-tertiary": "#ffffff",
+                    "on-surface": "#241919",
+                    "surface-dim": "#ebd5d5",
+                    "surface-container-lowest": "#ffffff",
+                    "primary-fixed": "#ffdada",
+                    "error": "#ba1a1a",
+                    "surface-container": "#ffe9e8",
+                    "inverse-surface": "#3a2d2d",
+                    "secondary-fixed-dim": "#ffb3b5",
+                    "surface-variant": "#f3dddd",
+                    "on-secondary-container": "#73061e",
+                    "surface-bright": "#fff8f7",
+                    "on-tertiary-container": "#c0b5b7",
+                    "surface": "#fff8f7",
+                    "on-tertiary-fixed": "#201a1c",
+                    "secondary-container": "#ff7480",
+                    "on-primary-fixed-variant": "#881c2b",
+                    "surface-container-low": "#fff0f0",
+                    "outline": "#8b7171",
+                    "background": "#fff8f7",
+                    "secondary-fixed": "#ffdada",
+                    "surface-container-highest": "#f3dddd",
+                    "primary": "#6b0119",
+                    "on-error-container": "#93000a",
+                    "tertiary-container": "#4e4749",
+                    "on-error": "#ffffff",
+                    "inverse-primary": "#ffb3b4",
+                    "error-container": "#ffdad6",
+                    "on-background": "#241919",
+                    "on-tertiary-fixed-variant": "#4c4547",
+                    "tertiary": "#373132",
+                    "on-secondary": "#ffffff",
+                    "secondary": "#a93342",
+                    "on-primary-container": "#ff9da0",
+                    "on-secondary-fixed-variant": "#891a2c",
+                    "tertiary-fixed-dim": "#cfc4c6",
+                    "primary-fixed-dim": "#ffb3b4",
+                    "inverse-on-surface": "#ffedec",
+                    "tertiary-fixed": "#ebe0e2",
+                    "on-secondary-fixed": "#40000c",
+                    "primary-container": "#8b1e2d",
+                    "on-surface-variant": "#574142",
+                    "surface-container-high": "#f9e3e3",
+                    "outline-variant": "#debfbf"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "container-max": "1440px",
+                    "stack-lg": "48px",
+                    "stack-md": "24px",
+                    "base": "8px",
+                    "margin-desktop": "64px",
+                    "section-padding": "80px",
+                    "gutter": "24px",
+                    "stack-sm": "8px",
+                    "margin-mobile": "16px"
+            },
+            "fontFamily": {
+                    "body-lg": ["Manrope"],
+                    "headline-md": ["Manrope"],
+                    "headline-lg": ["Manrope"],
+                    "label-sm": ["Manrope"],
+                    "body-md": ["Manrope"],
+                    "display-xl": ["Manrope"],
+                    "label-md": ["Manrope"]
+            },
+            "fontSize": {
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                    "headline-lg": ["32px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                    "label-sm": ["12px", {"lineHeight": "1.0", "letterSpacing": "0.03em", "fontWeight": "500"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "display-xl": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "label-md": ["14px", {"lineHeight": "1.0", "letterSpacing": "0.05em", "fontWeight": "600"}]
+            }
+          }
+        }
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 4px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #8b7171;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body class="bg-background font-body-md text-on-background antialiased custom-scrollbar">
+<!-- TopAppBar -->
+<header class="bg-white dark:bg-zinc-950 fixed top-0 w-full z-50 border-b border-zinc-100 dark:border-zinc-800 transition-all duration-300">
+<div class="flex justify-between items-center h-20 px-16 max-w-[1440px] mx-auto">
+<div class="flex items-center gap-12">
+<a class="text-2xl font-black tracking-tighter text-zinc-900 dark:text-zinc-100 font-manrope tracking-tight uppercase" href="#">FERIA AMERICANA</a>
+<nav class="hidden lg:flex items-center gap-8">
+<a class="text-red-900 dark:text-red-400 border-b border-red-900 dark:border-red-400 pb-1 font-manrope tracking-tight uppercase text-label-md" href="#">New Arrivals</a>
+<a class="text-zinc-500 dark:text-zinc-400 hover:text-red-900 dark:hover:text-red-400 transition-all duration-300 font-manrope tracking-tight uppercase text-label-md" href="#">Collections</a>
+<a class="text-zinc-500 dark:text-zinc-400 hover:text-red-900 dark:hover:text-red-400 transition-all duration-300 font-manrope tracking-tight uppercase text-label-md" href="#">Vintage</a>
+<a class="text-zinc-500 dark:text-zinc-400 hover:text-red-900 dark:hover:text-red-400 transition-all duration-300 font-manrope tracking-tight uppercase text-label-md" href="#">Editorial</a>
+</nav>
+</div>
+<div class="flex items-center gap-6">
+<div class="relative group">
+<span class="material-symbols-outlined text-zinc-600 dark:text-zinc-400 cursor-pointer scale-100 active:scale-95 transition-transform" data-icon="search">search</span>
+</div>
+<span class="material-symbols-outlined text-zinc-600 dark:text-zinc-400 cursor-pointer scale-100 active:scale-95 transition-transform" data-icon="person">person</span>
+<div class="relative">
+<span class="material-symbols-outlined text-zinc-600 dark:text-zinc-400 cursor-pointer scale-100 active:scale-95 transition-transform" data-icon="shopping_bag">shopping_bag</span>
+<span class="absolute -top-1 -right-1 bg-primary-container text-white text-[10px] w-4 h-4 flex items-center justify-center rounded-full">2</span>
+</div>
+</div>
+</div>
+</header>
+<main class="pt-32 pb-20 px-16 max-w-[1440px] mx-auto min-h-screen">
+<div class="flex flex-col md:flex-row gap-12">
+<!-- Sidebar Filters -->
+<aside class="w-full md:w-64 flex-shrink-0 space-y-10">
+<div class="flex items-center justify-between">
+<h2 class="font-headline-md text-zinc-900 uppercase tracking-tight text-sm font-bold">Filters</h2>
+<button class="text-label-sm text-zinc-400 hover:text-primary transition-colors underline underline-offset-4">Reset All</button>
+</div>
+<!-- Categories -->
+<div>
+<h3 class="font-label-md text-zinc-900 uppercase mb-4">Category</h3>
+<ul class="space-y-3">
+<li>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input checked="" class="w-4 h-4 rounded border-outline-variant text-primary focus:ring-primary transition-colors" type="checkbox"/>
+<span class="text-body-md text-on-surface-variant group-hover:text-primary transition-colors">Outerwear</span>
+<span class="ml-auto text-label-sm text-zinc-400">(24)</span>
+</label>
+</li>
+<li>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="w-4 h-4 rounded border-outline-variant text-primary focus:ring-primary transition-colors" type="checkbox"/>
+<span class="text-body-md text-on-surface-variant group-hover:text-primary transition-colors">Denim</span>
+<span class="ml-auto text-label-sm text-zinc-400">(42)</span>
+</label>
+</li>
+<li>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="w-4 h-4 rounded border-outline-variant text-primary focus:ring-primary transition-colors" type="checkbox"/>
+<span class="text-body-md text-on-surface-variant group-hover:text-primary transition-colors">Accessories</span>
+<span class="ml-auto text-label-sm text-zinc-400">(18)</span>
+</label>
+</li>
+<li>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="w-4 h-4 rounded border-outline-variant text-primary focus:ring-primary transition-colors" type="checkbox"/>
+<span class="text-body-md text-on-surface-variant group-hover:text-primary transition-colors">Knitwear</span>
+<span class="ml-auto text-label-sm text-zinc-400">(31)</span>
+</label>
+</li>
+</ul>
+</div>
+<!-- Price Range -->
+<div>
+<h3 class="font-label-md text-zinc-900 uppercase mb-4">Price Range</h3>
+<div class="space-y-4">
+<div class="flex items-center justify-between text-label-sm text-zinc-500">
+<span>$0</span>
+<span>$2,500</span>
+</div>
+<input class="w-full h-1 bg-zinc-200 rounded-lg appearance-none cursor-pointer accent-primary" type="range"/>
+<div class="flex gap-2">
+<div class="flex-1 bg-white border border-outline-variant px-3 py-2 text-label-sm text-zinc-900">$ Min</div>
+<div class="flex-1 bg-white border border-outline-variant px-3 py-2 text-label-sm text-zinc-900">$ Max</div>
+</div>
+</div>
+</div>
+<!-- Size Selector -->
+<div>
+<h3 class="font-label-md text-zinc-900 uppercase mb-4">Size</h3>
+<div class="grid grid-cols-4 gap-2">
+<button class="border border-outline-variant py-2 text-label-sm hover:border-zinc-900 transition-colors uppercase">XS</button>
+<button class="border border-zinc-900 py-2 text-label-sm bg-zinc-900 text-white transition-colors uppercase">S</button>
+<button class="border border-outline-variant py-2 text-label-sm hover:border-zinc-900 transition-colors uppercase">M</button>
+<button class="border border-outline-variant py-2 text-label-sm hover:border-zinc-900 transition-colors uppercase">L</button>
+<button class="border border-outline-variant py-2 text-label-sm hover:border-zinc-900 transition-colors uppercase">XL</button>
+<button class="border border-outline-variant py-2 text-label-sm hover:border-zinc-900 transition-colors uppercase">OS</button>
+</div>
+</div>
+<!-- Gender -->
+<div>
+<h3 class="font-label-md text-zinc-900 uppercase mb-4">Gender</h3>
+<ul class="space-y-2">
+<li>
+<label class="flex items-center gap-3 cursor-pointer">
+<input class="w-4 h-4 text-primary focus:ring-primary border-outline-variant" name="gender" type="radio"/>
+<span class="text-body-md text-on-surface-variant">Men</span>
+</label>
+</li>
+<li>
+<label class="flex items-center gap-3 cursor-pointer">
+<input class="w-4 h-4 text-primary focus:ring-primary border-outline-variant" name="gender" type="radio"/>
+<span class="text-body-md text-on-surface-variant">Women</span>
+</label>
+</li>
+<li>
+<label class="flex items-center gap-3 cursor-pointer">
+<input checked="" class="w-4 h-4 text-primary focus:ring-primary border-outline-variant" name="gender" type="radio"/>
+<span class="text-body-md text-on-surface-variant">Unisex</span>
+</label>
+</li>
+</ul>
+</div>
+</aside>
+<!-- Product Grid Canvas -->
+<section class="flex-1">
+<div class="flex items-baseline justify-between mb-10 border-b border-zinc-100 pb-4">
+<div>
+<h1 class="font-display-xl text-zinc-900 mb-1">Our Catalog</h1>
+<p class="text-body-md text-zinc-500">124 Curated Pieces Available</p>
+</div>
+<div class="flex items-center gap-4">
+<span class="text-label-sm text-zinc-400 uppercase tracking-widest">Sort By:</span>
+<select class="bg-transparent border-none text-label-md text-zinc-900 focus:ring-0 cursor-pointer font-bold uppercase">
+<option>Latest Arrival</option>
+<option>Price: Low to High</option>
+<option>Price: High to Low</option>
+<option>Most Popular</option>
+</select>
+</div>
+</div>
+<!-- Grid Layout -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-16">
+<!-- Product Card 1 -->
+<div class="group">
+<div class="relative overflow-hidden aspect-[3/4] bg-zinc-100 mb-6">
+<img alt="Vintage Overcoat" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="studio shot of a high-quality wool vintage overcoat in deep camel color on a neutral background editorial style" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCoyqSh2BC-ER2W5ZvkT2cHx1PZ7zWw2oRNQWb9qPB6CU15NN444yQ2S-lfD1YbGjAKE6eZiL9qT_NYqr5ji1sMZGfi3NpKaT6dbE6p-2OS9LPVkgj4Rf4hZuTOS-G_XWB1PYFd5Z4zvx8J-nicpoj6cAM7qH0Q2HbVwGr2v3svdEWEieg1SbFJdB082Jp8v8LBo6erEEkhN11Ctq6pIKDzt0Fl49uK99BrZ0OpM2WhG8A4ezBJRcJcF8Hih_gkqoocDg9k0vXatQEf"/>
+<button class="absolute bottom-0 left-0 right-0 bg-primary-container text-white py-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300 font-label-md uppercase tracking-widest">
+                                Add to Bag
+                            </button>
+<button class="absolute top-4 right-4 bg-white/80 backdrop-blur-md p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-zinc-900" data-icon="favorite">favorite</span>
+</button>
+</div>
+<div class="space-y-1">
+<p class="text-label-sm text-zinc-400 uppercase tracking-tighter">Archival Outerwear</p>
+<h3 class="font-body-md text-zinc-900 font-medium">90's Cashmere Longline Overcoat</h3>
+<p class="font-headline-md text-primary">$420.00</p>
+</div>
+</div>
+<!-- Product Card 2 -->
+<div class="group">
+<div class="relative overflow-hidden aspect-[3/4] bg-zinc-100 mb-6">
+<img alt="Designer Denim" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="close-up of premium raw selvedge denim jeans laid flat on a rustic wooden floor with natural soft lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAqSmJpaD2mDAL0lGzI229L9jIGDQZaBLiwuq5cmJI40ovB7QUwgp9feVci2-sbwJpIk0z7bY5bPAS7i_NOT5CvnOZaGNEWXTuCCiSbPQE8R6gY-AtzJlGjObMi3cW7ZC-P5-1H_p3dGBRJGqGUx1FkKHZ51UsRVAo6hB-wpfFS1A6GZyeKe0IiBNy-XIs7A2WqLJnEDLs87erj3654vYDGwZ8qrLsC_FALb5rLJU-R8KBroxCmqgCt9XF-s7d3ua5YhIr6vTkO3Ujx"/>
+<button class="absolute bottom-0 left-0 right-0 bg-primary-container text-white py-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300 font-label-md uppercase tracking-widest">
+                                Add to Bag
+                            </button>
+<span class="absolute top-4 left-4 bg-primary text-white text-[10px] px-2 py-1 uppercase tracking-widest font-bold">Sold Out</span>
+</div>
+<div class="space-y-1">
+<p class="text-label-sm text-zinc-400 uppercase tracking-tighter">Selvedge Denim</p>
+<h3 class="font-body-md text-zinc-900 font-medium">Raw Japanese Indigo Denim</h3>
+<p class="font-headline-md text-zinc-400 line-through">$185.00</p>
+</div>
+</div>
+<!-- Product Card 3 -->
+<div class="group">
+<div class="relative overflow-hidden aspect-[3/4] bg-zinc-100 mb-6">
+<img alt="Silk Blouse" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="elegant silk blouse in ivory white hanging on a minimal black rack in a sun-drenched fashion studio shadow play" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCqSBVeew4oPUsxFrUNlGWMdxims5c1RTkwZf7xpZTX7i1kmXdX7iSa9CtsPXzog3Y5J08TPgDMV8dIgiscmLtG-q1VckSjfEe1suzaSox2247GVS0VhiREhWcwknf9RP7NQ3EY23rO_6zR--PlnipjHcoIp6Y2wUoWB8knITNDq36cXA52i_w-FU3pu2dvwQO3paUiR6H1xAF5nAXInUNoxyHN6TkQTV_plUvh1om-OWQkFEJB1mpDt4MZMHPV2UNqLSotAwXFjDV1"/>
+<button class="absolute bottom-0 left-0 right-0 bg-primary-container text-white py-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300 font-label-md uppercase tracking-widest">
+                                Add to Bag
+                            </button>
+<button class="absolute top-4 right-4 bg-white/80 backdrop-blur-md p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-zinc-900" data-icon="favorite">favorite</span>
+</button>
+</div>
+<div class="space-y-1">
+<p class="text-label-sm text-zinc-400 uppercase tracking-tighter">Luxury Basics</p>
+<h3 class="font-body-md text-zinc-900 font-medium">Cream Silk Button-Down</h3>
+<p class="font-headline-md text-primary">$210.00</p>
+</div>
+</div>
+<!-- Product Card 4 -->
+<div class="group">
+<div class="relative overflow-hidden aspect-[3/4] bg-zinc-100 mb-6">
+<img alt="Vintage Tee" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="stack of perfectly folded vintage graphic t-shirts in soft washed cotton colors muted earthy tones studio lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD_RCdbgJvrLO_tz72atuJyvqSVhkxGKphpDjBurVTNRdUWLKFimklsT8h2FTEED_OyAFKF3erUrK-JB9Jnxi7RUyJYrGbBMaUGxh763CIFdqd3SGKizDP6nFvxXg3pVxIoicntxDAby49jjyLA0rWphFPDcFcBv8rHfUhzWX55hECWNaQeGQxKjKN19ZW-iyC61lPCNfTmWfwqxiM_rLqST9P2p6A8K7uPn7UgLvdKpWEAkg1ps9rkXXe5BxKzcG5CJkbRKuYFq5rg"/>
+<button class="absolute bottom-0 left-0 right-0 bg-primary-container text-white py-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300 font-label-md uppercase tracking-widest">
+                                Add to Bag
+                            </button>
+</div>
+<div class="space-y-1">
+<p class="text-label-sm text-zinc-400 uppercase tracking-tighter">Graphic Vintage</p>
+<h3 class="font-body-md text-zinc-900 font-medium">1988 World Tour Graphic Tee</h3>
+<p class="font-headline-md text-primary">$85.00</p>
+</div>
+</div>
+<!-- Product Card 5 -->
+<div class="group">
+<div class="relative overflow-hidden aspect-[3/4] bg-zinc-100 mb-6">
+<img alt="Knitwear" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="chunky oversized mohair sweater in deep olive green draped over an antique chair editorial fashion photography" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAKRpd8wvjjuKr-n4jbK7l7vHrmh7s6BmLtYOJKK4X_D03_GSBjAxCtzkC3CcHRsuFElM41hwGVyv5mK78GzifajLbAtyZtc1GeyUuxX7UFkDq4u2n5W_DaVdqUWNmhdhW6ybrEomENwmRGAWYtIxZCY1s7enWJbCZ2RaeY0rm9o_65F6bGkrXoTNSKduWyr7yHJX82kQSJELd0GUbyHlIgxsVH7ORvn28H0Xmt1O8bzx7riKhNPQENSzDeXHPLkmVkSwJ4p423Q9ZK"/>
+<button class="absolute bottom-0 left-0 right-0 bg-primary-container text-white py-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300 font-label-md uppercase tracking-widest">
+                                Add to Bag
+                            </button>
+</div>
+<div class="space-y-1">
+<p class="text-label-sm text-zinc-400 uppercase tracking-tighter">Premium Knitwear</p>
+<h3 class="font-body-md text-zinc-900 font-medium">Hand-Knit Mohair Cardigan</h3>
+<p class="font-headline-md text-primary">$340.00</p>
+</div>
+</div>
+<!-- Product Card 6 -->
+<div class="group">
+<div class="relative overflow-hidden aspect-[3/4] bg-zinc-100 mb-6">
+<img alt="Footwear" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="close-up of black leather vintage loafers on a polished concrete floor minimal aesthetic sharp focus soft highlights" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDY_jIOG-5ycAOMC2vHLuCfbyQJzb7mGd2eHmg5B5Y0unttp4TJkk1SJbpVFDGrEKrLXk2BUzGBFaGkLa8N1ig6X_PdYl9MXuTrsVEQnuwrrZx-0mhOh5JGj7LjdprFmXICCQxl7A7PxNtBRGxcQpa89RUiHatOx6dyPz5Z2OUJrXUZmNm1zc2czNDsNDurlRcXh79CWDdCm0bwK3BufXlApkWGqKsDb9sh6Yoat_zrB47n2HFesabwYW4WND-TTaHlJxRlGlOFEQSq"/>
+<button class="absolute bottom-0 left-0 right-0 bg-primary-container text-white py-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300 font-label-md uppercase tracking-widest">
+                                Add to Bag
+                            </button>
+</div>
+<div class="space-y-1">
+<p class="text-label-sm text-zinc-400 uppercase tracking-tighter">Leather Goods</p>
+<h3 class="font-body-md text-zinc-900 font-medium">Vintage Tassel Loafers</h3>
+<p class="font-headline-md text-primary">$290.00</p>
+</div>
+</div>
+</div>
+<!-- Pagination -->
+<div class="mt-20 flex justify-center items-center gap-4">
+<button class="w-10 h-10 flex items-center justify-center border border-outline-variant hover:border-zinc-900 transition-colors">
+<span class="material-symbols-outlined text-sm" data-icon="chevron_left">chevron_left</span>
+</button>
+<button class="w-10 h-10 flex items-center justify-center bg-zinc-900 text-white font-label-md">1</button>
+<button class="w-10 h-10 flex items-center justify-center border border-outline-variant hover:border-zinc-900 transition-colors font-label-md">2</button>
+<button class="w-10 h-10 flex items-center justify-center border border-outline-variant hover:border-zinc-900 transition-colors font-label-md">3</button>
+<button class="w-10 h-10 flex items-center justify-center border border-outline-variant hover:border-zinc-900 transition-colors">
+<span class="material-symbols-outlined text-sm" data-icon="chevron_right">chevron_right</span>
+</button>
+</div>
+</section>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-zinc-50 dark:bg-zinc-900 w-full py-16 border-t border-zinc-200 dark:border-zinc-800">
+<div class="flex flex-col md:flex-row justify-between items-center px-16 gap-8 max-w-[1440px] mx-auto">
+<div class="flex flex-col items-center md:items-start gap-4">
+<span class="text-lg font-bold text-zinc-900 dark:text-zinc-100 font-manrope tracking-tight uppercase">FERIA AMERICANA</span>
+<p class="text-zinc-400 font-manrope text-[10px] uppercase tracking-widest">© 2024 FERIA AMERICANA. CURATED QUALITY.</p>
+</div>
+<div class="flex gap-8">
+<a class="text-zinc-400 dark:text-zinc-500 hover:text-red-900 dark:hover:text-red-400 opacity-100 hover:opacity-80 transition-opacity font-manrope text-[10px] uppercase tracking-widest" href="#">Shipping</a>
+<a class="text-zinc-400 dark:text-zinc-500 hover:text-red-900 dark:hover:text-red-400 opacity-100 hover:opacity-80 transition-opacity font-manrope text-[10px] uppercase tracking-widest" href="#">Returns</a>
+<a class="text-zinc-400 dark:text-zinc-500 hover:text-red-900 dark:hover:text-red-400 opacity-100 hover:opacity-80 transition-opacity font-manrope text-[10px] uppercase tracking-widest" href="#">Privacy</a>
+<a class="text-zinc-400 dark:text-zinc-500 hover:text-red-900 dark:hover:text-red-400 opacity-100 hover:opacity-80 transition-opacity font-manrope text-[10px] uppercase tracking-widest" href="#">Contact</a>
+<a class="text-zinc-400 dark:text-zinc-500 hover:text-red-900 dark:hover:text-red-400 opacity-100 hover:opacity-80 transition-opacity font-manrope text-[10px] uppercase tracking-widest" href="#">Sustainability</a>
+</div>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-zinc-400 hover:text-red-900 cursor-pointer transition-colors" data-icon="share">share</span>
+<span class="material-symbols-outlined text-zinc-400 hover:text-red-900 cursor-pointer transition-colors" data-icon="mail">mail</span>
+</div>
+</div>
+</footer>
+</body></html>

@@ -7,6 +7,9 @@ import { ProtectedRoute, PublicRoute } from './guards'
 
 const LandingPage = lazy(() => import('../pages/public/LandingPage'))
 const CatalogPage = lazy(() => import('../pages/shop/CatalogPage'))
+const ProductDetailPage = lazy(() => import('../pages/shop/ProductDetailPage'))
+const ShoppingCartPage = lazy(() => import('../pages/shop/ShoppingCartPage'))
+const WishlistPage = lazy(() => import('../pages/shop/WishlistPage'))
 const ProfilePage = lazy(() => import('../pages/account/ProfilePage'))
 const LoginPage = lazy(() => import('../pages/auth/LoginPage'))
 const RegisterPage = lazy(() => import('../pages/auth/RegisterPage'))
@@ -17,6 +20,9 @@ export function AppRouter() {
       <Route element={<PublicLayout />}>
         <Route path="/" element={<LandingPage />} />
         <Route path="/catalog" element={<CatalogPage />} />
+        <Route path="/product-detail" element={<ProductDetailPage />} />
+        <Route path="/shopping-cart" element={<ShoppingCartPage />} />
+        <Route path="/wishlist" element={<WishlistPage />} />
       </Route>
 
       <Route element={<AuthLayout />}>

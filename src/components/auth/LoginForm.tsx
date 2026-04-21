@@ -1,7 +1,6 @@
 import { Link } from 'react-router-dom'
 import { useLoginForm } from '../../hooks/useLoginForm'
 import { InlineNotice } from '../ui/InlineNotice'
-import { TextField } from '../ui/TextField'
 
 export function LoginForm() {
   const {
@@ -17,49 +16,78 @@ export function LoginForm() {
   } = useLoginForm()
 
   return (
-    <div className="grid gap-7 rounded-[1.3rem] border border-black/10 bg-white/90 p-6 shadow-card md:p-9">
-      <div className="grid gap-2 text-center">
+    <div className="border border-[#debfbf] bg-white px-6 py-10 shadow-[0_8px_30px_rgba(107,1,25,0.06)] sm:px-10 sm:py-12">
+      <div className="mb-10 grid gap-3 text-center">
         <h1
           id="login-title"
-          className="m-0 font-headline text-[clamp(2.4rem,4vw,3.2rem)] leading-none font-extrabold tracking-[-0.05em] text-headline"
+          className="m-0 font-headline text-[2.25rem] leading-[0.92] font-black uppercase tracking-[-0.06em] text-[#241919] sm:text-[2.7rem]"
         >
-          Welcome Back
+          Feria
+          <br />
+          Americana
         </h1>
-        <p className="m-0 text-text-muted">
-          Enter your details to access your curated collection.
+        <p className="m-0 text-[0.62rem] uppercase tracking-[0.12em] text-[#574142] sm:text-[0.68rem]">
+          Enter your credentials to continue
         </p>
       </div>
 
-      <form className="grid gap-5" onSubmit={handleSubmit} noValidate>
-        <TextField
-          error={errors.email}
-          id="login-email"
-          label="Email Address"
-          name="email"
-          placeholder="name@example.com"
-          type="email"
-          value={values.email}
-          onBlur={() => handleBlur('email')}
-          onChange={(event) => updateValue(event, 'email')}
-        />
+      <form className="grid gap-6" onSubmit={handleSubmit} noValidate>
+        <label className="grid gap-2" htmlFor="login-email">
+          <span className="text-[0.62rem] uppercase tracking-[0.16em] text-[#574142]">
+            Email Address
+          </span>
+          <span className="relative block">
+            <span
+              aria-hidden="true"
+              className="absolute top-1/2 left-4 -translate-y-1/2 text-[0.9rem] text-[#8b7171]"
+            >
+              @
+            </span>
+            <input
+              aria-describedby={errors.email ? 'login-email-error' : undefined}
+              aria-invalid={Boolean(errors.email)}
+              className={`w-full border border-[#debfbf] bg-white py-3 pl-11 pr-4 text-[0.9rem] text-[#241919] outline-none transition focus:border-[#241919] ${
+                errors.email ? 'border-[#ba1a1a] bg-[#fff3f1]' : ''
+              }`}
+              id="login-email"
+              name="email"
+              placeholder="name@example.com"
+              type="email"
+              value={values.email}
+              onBlur={() => handleBlur('email')}
+              onChange={(event) => updateValue(event, 'email')}
+            />
+          </span>
+          {errors.email ? (
+            <p className="m-0 text-[0.76rem] text-[#ba1a1a]" id="login-email-error" role="alert">
+              {errors.email}
+            </p>
+          ) : null}
+        </label>
 
         <label className="grid gap-2" htmlFor="login-password">
-          <span className="flex flex-col gap-1 text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-text-muted sm:flex-row sm:items-center sm:justify-between">
+          <span className="flex items-center justify-between gap-3 text-[0.62rem] uppercase tracking-[0.16em] text-[#574142]">
             <span>Password</span>
             <button
-              className="border-0 bg-transparent p-0 text-left text-[0.7rem] uppercase tracking-[0.14em] text-accent underline decoration-accent/35 underline-offset-4"
+              className="border-0 bg-transparent p-0 text-left text-[0.62rem] uppercase tracking-[0.16em] text-[#8b1e2d] transition-colors hover:underline"
               type="button"
             >
-              Forgot password
+              Forgot?
             </button>
           </span>
 
           <span className="relative block">
+            <span
+              aria-hidden="true"
+              className="absolute top-1/2 left-4 -translate-y-1/2 text-[0.95rem] text-[#8b7171]"
+            >
+              *
+            </span>
             <input
               aria-describedby={errors.password ? 'login-password-error' : undefined}
               aria-invalid={Boolean(errors.password)}
-              className={`w-full rounded-2xl border border-transparent bg-surface-muted px-4 py-4 pr-20 text-text outline-none transition focus:border-accent/30 focus:shadow-[0_0_0_0.28rem_rgba(118,85,26,0.12)] ${
-                errors.password ? 'border-danger/35 bg-danger/5' : ''
+              className={`w-full border border-[#debfbf] bg-white py-3 pl-11 pr-16 text-[0.9rem] text-[#241919] outline-none transition focus:border-[#241919] ${
+                errors.password ? 'border-[#ba1a1a] bg-[#fff3f1]' : ''
               }`}
               id="login-password"
               name="password"
@@ -71,42 +99,40 @@ export function LoginForm() {
             />
             <button
               aria-label={showPassword ? 'Hide password' : 'Show password'}
-              className="absolute top-1/2 right-3 -translate-y-1/2 rounded-full border-0 bg-transparent px-2 py-1 text-[0.82rem] font-semibold text-text-muted"
+              className="absolute top-1/2 right-4 -translate-y-1/2 border-0 bg-transparent p-0 text-[0.68rem] uppercase tracking-[0.08em] text-[#8b7171] transition-colors hover:text-[#241919]"
               type="button"
               onClick={() => setShowPassword((currentValue) => !currentValue)}
             >
-              {showPassword ? 'Hide' : 'Show'}
+              {showPassword ? 'Hide' : 'View'}
             </button>
           </span>
 
           {errors.password ? (
-            <p className="m-0 text-[0.82rem] text-danger" id="login-password-error" role="alert">
+            <p className="m-0 text-[0.76rem] text-[#ba1a1a]" id="login-password-error" role="alert">
               {errors.password}
             </p>
           ) : null}
         </label>
 
-        <div className="grid gap-4">
+        <label className="flex items-center gap-2 py-1 text-[0.74rem] text-[#574142]" htmlFor="remember-me">
+          <input
+            className="h-4 w-4 rounded-[2px] border border-[#debfbf] accent-[#8b1e2d]"
+            id="remember-me"
+            type="checkbox"
+          />
+          <span>Remember me</span>
+        </label>
+
+        <div className="grid gap-3">
           <button
-            className="inline-flex items-center justify-center rounded-2xl bg-accent bg-[linear-gradient(135deg,#76551a_0%,#5e4312_100%)] px-6 py-4 text-[0.82rem] font-bold uppercase tracking-[0.2em] text-[#fffaf4] shadow-panel transition hover:-translate-y-px hover:brightness-105"
+            className="inline-flex items-center justify-center bg-[#8b1e2d] px-6 py-3.5 text-[0.72rem] font-semibold uppercase tracking-[0.22em] text-white transition hover:opacity-90"
             type="submit"
           >
             Login
           </button>
 
-          <div
-            className="grid grid-cols-[1fr_auto_1fr] items-center gap-4"
-            aria-hidden="true"
-          >
-            <span className="h-px bg-black/10" />
-            <strong className="text-[0.68rem] font-semibold uppercase tracking-[0.22em] text-text-muted/80">
-              Or
-            </strong>
-            <span className="h-px bg-black/10" />
-          </div>
-
           <Link
-            className="inline-flex items-center justify-center rounded-2xl bg-accent-soft px-6 py-4 text-[0.82rem] font-bold uppercase tracking-[0.18em] text-[#694d0c] no-underline"
+            className="inline-flex items-center justify-center border border-[#241919] bg-transparent px-6 py-3.5 text-[0.72rem] font-semibold uppercase tracking-[0.22em] text-[#241919] no-underline transition hover:bg-[#f3dddd]"
             to="/register"
           >
             Create account
@@ -114,11 +140,35 @@ export function LoginForm() {
         </div>
       </form>
 
+      <div className="mt-8 border-t border-[#debfbf] pt-6">
+        <p className="m-0 text-center text-[0.6rem] uppercase tracking-[0.18em] text-[#574142]">
+          Or continue with
+        </p>
+        <div className="mt-3 grid grid-cols-2 gap-3">
+          <button
+            className="flex items-center justify-center border border-[#debfbf] py-3 text-[#241919] transition hover:bg-[#fff0f0]"
+            type="button"
+          >
+            <span aria-hidden="true" className="text-sm">
+              A
+            </span>
+          </button>
+          <button
+            className="flex items-center justify-center border border-[#debfbf] py-3 text-[#241919] transition hover:bg-[#fff0f0]"
+            type="button"
+          >
+            <span aria-hidden="true" className="text-sm">
+              @
+            </span>
+          </button>
+        </div>
+      </div>
+
       {submitted ? (
         <InlineNotice
           action={
             <button
-              className="rounded-full bg-success-text/10 px-4 py-3 font-semibold"
+              className="rounded-sm bg-success-text/10 px-4 py-3 font-semibold"
               type="button"
               onClick={reset}
             >
