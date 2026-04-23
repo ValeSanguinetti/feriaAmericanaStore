@@ -1,5 +1,5 @@
-const categoryFilters = ['Outerwear', 'Knitwear', 'Accessories', 'Footwear']
-const genderFilters = ['All', 'Women', 'Men']
+const categoryFilters = ['Abrigos', 'Tejidos', 'Accesorios', 'Calzado']
+const genderFilters = ['Todos', 'Mujer', 'Hombre']
 const sizeFilters = ['XS', 'S', 'M', 'L', 'XL']
 
 export function CatalogFilters() {
@@ -8,7 +8,7 @@ export function CatalogFilters() {
       <div className="space-y-10 lg:sticky lg:top-32">
         <div>
           <h3 className="mb-5 font-headline text-[0.82rem] font-extrabold uppercase tracking-[0.18em] text-headline">
-            Category
+            Categoría
           </h3>
           <div className="grid gap-3">
             {categoryFilters.map((filter, index) => (
@@ -22,7 +22,7 @@ export function CatalogFilters() {
 
         <div>
           <h3 className="mb-5 font-headline text-[0.82rem] font-extrabold uppercase tracking-[0.18em] text-headline">
-            Gender
+            Género
           </h3>
           <div className="flex flex-wrap gap-2">
             {genderFilters.map((filter, index) => (
@@ -41,7 +41,7 @@ export function CatalogFilters() {
 
         <div>
           <h3 className="mb-5 font-headline text-[0.82rem] font-extrabold uppercase tracking-[0.18em] text-headline">
-            Size
+            Talle
           </h3>
           <div className="grid grid-cols-4 gap-2">
             {sizeFilters.map((size) => (
@@ -62,7 +62,7 @@ export function CatalogFilters() {
 
         <div>
           <h3 className="mb-5 font-headline text-[0.82rem] font-extrabold uppercase tracking-[0.18em] text-headline">
-            Price Range
+            Rango de precios
           </h3>
           <div className="grid gap-4">
             <input className="accent-accent" defaultValue="35" max="100" min="0" type="range" />

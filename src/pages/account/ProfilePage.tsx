@@ -5,39 +5,39 @@ import profileSaved2 from '../../assets/profile-stitch-saved-2.jpg'
 import profileSaved3 from '../../assets/profile-stitch-saved-3.jpg'
 import profileSaved4 from '../../assets/profile-stitch-saved-4.jpg'
 
-const navItems = ['New Arrivals', 'Collections', 'Vintage', 'Editorial']
+const navItems = ['Novedades', 'Colecciones', 'Vintage', 'Editorial']
 
 const profileNavItems = [
-  'Personal Information',
-  'Order History',
-  'Saved Items',
-  'Account Settings',
+  'Información personal',
+  'Historial de pedidos',
+  'Artículos guardados',
+  'Configuración de la cuenta',
 ]
 
 const savedItems = [
   {
     image: profileSaved1,
     price: '$420.00',
-    title: 'Architectural Silk Midi',
+    title: 'Vestido midi de seda arquitectónica',
   },
   {
     image: profileSaved2,
     price: '$185.00',
-    title: 'Vintage Selvedge Denim',
+    title: 'Denim selvedge vintage',
   },
   {
     image: profileSaved3,
     price: '$295.00',
-    title: 'Hand-Crafted Loafer',
+    title: 'Mocasín hecho a mano',
   },
   {
     image: profileSaved4,
     price: '$850.00',
-    title: 'Solid Gold Chain No. 4',
+    title: 'Cadena de oro macizo N.º 4',
   },
 ]
 
-const footerLinks = ['Shipping', 'Returns', 'Privacy', 'Contact', 'Sustainability']
+const footerLinks = ['Envíos', 'Devoluciones', 'Privacidad', 'Contacto', 'Sustentabilidad']
 
 export default function ProfilePage() {
   return (
@@ -60,13 +60,13 @@ export default function ProfilePage() {
           </nav>
           <div className="flex items-center gap-6">
             <button className="border-0 bg-transparent p-0 text-zinc-900" type="button">
-              Search
+              Buscar
             </button>
             <button className="border-b border-[#8b1e2d] pb-1 text-[#8b1e2d]" type="button">
-              Profile
+              Perfil
             </button>
             <Link className="border-0 bg-transparent p-0 text-zinc-900 no-underline" to="/shopping-cart">
-              Bag
+              Bolso
             </Link>
           </div>
         </div>
@@ -76,8 +76,8 @@ export default function ProfilePage() {
         <div className="flex flex-col gap-12 md:flex-row">
           <aside className="w-full shrink-0 md:w-64">
             <div className="mb-10">
-              <h1 className="m-0 text-[2rem] font-semibold text-[#241919]">My Profile</h1>
-              <p className="m-0 mt-2 text-[1rem] text-[#574142]">Member since October 2023</p>
+              <h1 className="m-0 text-[2rem] font-semibold text-[#241919]">Mi perfil</h1>
+              <p className="m-0 mt-2 text-[1rem] text-[#574142]">Miembro desde octubre de 2023</p>
             </div>
 
             <nav className="flex flex-col gap-1">
@@ -89,7 +89,7 @@ export default function ProfilePage() {
                       ? 'rounded-lg bg-[#8b1e2d] px-4 py-3 text-[0.82rem] font-semibold text-white no-underline'
                       : 'rounded-lg px-4 py-3 text-[0.82rem] font-semibold text-[#241919] no-underline transition-colors hover:bg-[#fff0f0]'
                   }
-                  to={item === 'Saved Items' ? '/wishlist' : '/profile'}
+                  to={item === 'Artículos guardados' ? '/wishlist' : '/profile'}
                 >
                   {item}
                 </Link>
@@ -99,7 +99,7 @@ export default function ProfilePage() {
                 className="mt-8 rounded-lg px-4 py-3 text-[0.82rem] font-semibold text-[#241919] no-underline transition-colors hover:bg-[#fff0f0]"
                 to="/login"
               >
-                Sign Out
+                Cerrar sesión
               </Link>
             </nav>
           </aside>
@@ -108,7 +108,7 @@ export default function ProfilePage() {
             <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
               <article className="border border-[#debfbf] bg-white p-8 md:col-span-2">
                 <span className="mb-4 block text-[0.68rem] uppercase tracking-[0.18em] text-[#8b1e2d]">
-                  Default Shipping
+                  Envío predeterminado
                 </span>
                 <h2 className="m-0 mb-6 text-[1.8rem] font-semibold text-[#241919]">
                   Julianne Thorne
@@ -123,23 +123,23 @@ export default function ProfilePage() {
                     className="border-0 border-b border-[#241919] bg-transparent p-0 pb-1 text-[0.78rem] font-semibold uppercase tracking-[0.18em] transition-colors hover:border-[#8b1e2d] hover:text-[#8b1e2d]"
                     type="button"
                   >
-                    Edit Address
+                    Editar dirección
                   </button>
                 </div>
               </article>
 
               <article className="bg-[#8b1e2d] p-8 text-white">
                 <span className="mb-4 block text-[0.68rem] uppercase tracking-[0.18em] opacity-80">
-                  Tier Status
+                  Estado del nivel
                 </span>
                 <h2 className="m-0 mb-2 text-[1.8rem] font-semibold">Vintage Elite</h2>
-                <p className="m-0 text-[1rem] opacity-90">1,450 Points Earned</p>
+                <p className="m-0 text-[1rem] opacity-90">1,450 puntos acumulados</p>
                 <div className="mt-8">
                   <div className="mb-2 h-1 w-full bg-white/20">
                     <div className="h-full w-[70%] bg-white" />
                   </div>
                   <p className="m-0 text-[0.68rem] uppercase tracking-[0.18em]">
-                    550 pts to next tier
+                    550 pts para el siguiente nivel
                   </p>
                 </div>
               </article>
@@ -147,12 +147,12 @@ export default function ProfilePage() {
 
             <section>
               <div className="mb-6 flex items-end justify-between gap-4">
-                <h3 className="m-0 text-[1.7rem] font-semibold text-[#241919]">Recent Order</h3>
+                <h3 className="m-0 text-[1.7rem] font-semibold text-[#241919]">Pedido reciente</h3>
                 <Link
                   className="border-b border-[#241919] pb-1 text-[0.78rem] font-semibold uppercase tracking-[0.18em] text-[#241919] no-underline"
                   to="/profile"
                 >
-                  View All
+                  Ver todos
                 </Link>
               </div>
 
@@ -167,7 +167,7 @@ export default function ProfilePage() {
                 <div className="flex-grow">
                   <div className="mb-2 flex flex-wrap gap-3">
                     <span className="rounded-full bg-[#f9e3e3] px-3 py-1 text-[0.68rem] uppercase tracking-[0.16em] text-[#8b1e2d]">
-                      In Transit
+                      En tránsito
                     </span>
                     <span className="pt-1 text-[0.72rem] text-[#574142]">#FA-9821034</span>
                   </div>
@@ -175,7 +175,7 @@ export default function ProfilePage() {
                     Oversized Cashmere Trench
                   </h4>
                   <p className="m-0 text-[1rem] text-[#574142]">
-                    Estimated arrival: Oct 24, 2023
+                    Llegada estimada: 24 oct 2023
                   </p>
                 </div>
                 <div className="w-full md:w-auto">
@@ -183,7 +183,7 @@ export default function ProfilePage() {
                     className="w-full bg-[#6b0119] px-8 py-3 text-[0.78rem] font-semibold uppercase tracking-[0.18em] text-white transition-colors hover:bg-[#8b1e2d] md:w-auto"
                     type="button"
                   >
-                    Track Order
+                    Rastrear pedido
                   </button>
                 </div>
               </article>
@@ -191,12 +191,12 @@ export default function ProfilePage() {
 
             <section>
               <div className="mb-6 flex items-end justify-between gap-4">
-                <h3 className="m-0 text-[1.7rem] font-semibold text-[#241919]">Saved Items</h3>
+                <h3 className="m-0 text-[1.7rem] font-semibold text-[#241919]">Artículos guardados</h3>
                 <Link
                   className="border-b border-[#241919] pb-1 text-[0.78rem] font-semibold uppercase tracking-[0.18em] text-[#241919] no-underline"
                   to="/wishlist"
                 >
-                  Edit Wishlist
+                  Editar lista de deseos
                 </Link>
               </div>
 
@@ -214,7 +214,7 @@ export default function ProfilePage() {
                         type="button"
                       >
                         <span aria-hidden="true" className="text-[#8b1e2d]">
-                          Heart
+                          Favorito
                         </span>
                       </button>
                     </div>
@@ -249,7 +249,7 @@ export default function ProfilePage() {
             ))}
           </div>
           <div className="text-[0.58rem] uppercase tracking-[0.24em] text-zinc-400">
-            &copy; 2024 Feria Americana. Curated quality.
+            &copy; 2024 Feria Americana. Calidad curada.
           </div>
         </div>
       </footer>

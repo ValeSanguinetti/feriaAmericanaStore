@@ -27,14 +27,14 @@ export function LoginForm() {
           Americana
         </h1>
         <p className="m-0 text-[0.62rem] uppercase tracking-[0.12em] text-[#574142] sm:text-[0.68rem]">
-          Enter your credentials to continue
+          Ingresa tus credenciales para continuar
         </p>
       </div>
 
       <form className="grid gap-6" onSubmit={handleSubmit} noValidate>
         <label className="grid gap-2" htmlFor="login-email">
           <span className="text-[0.62rem] uppercase tracking-[0.16em] text-[#574142]">
-            Email Address
+            Correo electrónico
           </span>
           <span className="relative block">
             <span
@@ -67,12 +67,12 @@ export function LoginForm() {
 
         <label className="grid gap-2" htmlFor="login-password">
           <span className="flex items-center justify-between gap-3 text-[0.62rem] uppercase tracking-[0.16em] text-[#574142]">
-            <span>Password</span>
+            <span>Contraseña</span>
             <button
               className="border-0 bg-transparent p-0 text-left text-[0.62rem] uppercase tracking-[0.16em] text-[#8b1e2d] transition-colors hover:underline"
               type="button"
             >
-              Forgot?
+              ¿Olvidaste?
             </button>
           </span>
 
@@ -98,12 +98,12 @@ export function LoginForm() {
               onChange={(event) => updateValue(event, 'password')}
             />
             <button
-              aria-label={showPassword ? 'Hide password' : 'Show password'}
+              aria-label={showPassword ? 'Ocultar contraseña' : 'Mostrar contraseña'}
               className="absolute top-1/2 right-4 -translate-y-1/2 border-0 bg-transparent p-0 text-[0.68rem] uppercase tracking-[0.08em] text-[#8b7171] transition-colors hover:text-[#241919]"
               type="button"
               onClick={() => setShowPassword((currentValue) => !currentValue)}
             >
-              {showPassword ? 'Hide' : 'View'}
+              {showPassword ? 'Ocultar' : 'Ver'}
             </button>
           </span>
 
@@ -120,7 +120,7 @@ export function LoginForm() {
             id="remember-me"
             type="checkbox"
           />
-          <span>Remember me</span>
+          <span>Recordarme</span>
         </label>
 
         <div className="grid gap-3">
@@ -128,21 +128,21 @@ export function LoginForm() {
             className="inline-flex items-center justify-center bg-[#8b1e2d] px-6 py-3.5 text-[0.72rem] font-semibold uppercase tracking-[0.22em] text-white transition hover:opacity-90"
             type="submit"
           >
-            Login
+            Iniciar sesión
           </button>
 
           <Link
             className="inline-flex items-center justify-center border border-[#241919] bg-transparent px-6 py-3.5 text-[0.72rem] font-semibold uppercase tracking-[0.22em] text-[#241919] no-underline transition hover:bg-[#f3dddd]"
             to="/register"
           >
-            Create account
+            Crear cuenta
           </Link>
         </div>
       </form>
 
       <div className="mt-8 border-t border-[#debfbf] pt-6">
         <p className="m-0 text-center text-[0.6rem] uppercase tracking-[0.18em] text-[#574142]">
-          Or continue with
+          O continúa con
         </p>
         <div className="mt-3 grid grid-cols-2 gap-3">
           <button
@@ -172,16 +172,16 @@ export function LoginForm() {
               type="button"
               onClick={reset}
             >
-              Reset
+              Reiniciar
             </button>
           }
         >
-          <strong className="block">Login validation passed.</strong>
+          <strong className="block">La validación de inicio de sesión fue correcta.</strong>
           <p className="mt-1 mb-0 text-success-text/90">
             <span className="underline decoration-success-text/30 underline-offset-4">
               {values.email}
             </span>{' '}
-            is ready to connect to a real session flow.
+            está listo para conectarse a un flujo real de sesión.
           </p>
         </InlineNotice>
       ) : null}

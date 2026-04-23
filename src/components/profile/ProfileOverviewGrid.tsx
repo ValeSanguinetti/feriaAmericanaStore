@@ -7,18 +7,18 @@ const profileTags = ['Silk', 'Monochrome', 'Structured']
 
 const recentOrders = [
   {
-    deliveredAt: 'Delivered Oct 12, 2023',
-    id: 'Order #AT-88291',
+    deliveredAt: 'Entregado el 12 oct 2023',
+    id: 'Pedido #AT-88291',
     image: profileOrder1,
     price: '$340.00',
-    title: 'Raw Silk Drapery Blouse',
+    title: 'Blusa drapeada de seda cruda',
   },
   {
-    deliveredAt: 'Delivered Sep 28, 2023',
-    id: 'Order #AT-87550',
+    deliveredAt: 'Entregado el 28 sep 2023',
+    id: 'Pedido #AT-87550',
     image: profileOrder2,
     price: '$485.00',
-    title: 'Structured Wool Trousers',
+    title: 'Pantalón estructurado de lana',
   },
 ]
 
@@ -26,20 +26,20 @@ const savedPieces = [
   {
     image: profileSaved1,
     price: '$1,200',
-    title: 'Cashmere Coat',
+    title: 'Abrigo de cashmere',
   },
   {
     image: profileSaved2,
     price: '$550',
-    title: 'Leather Mules',
+    title: 'Mules de cuero',
   },
 ]
 
 const settingsLinks = [
-  'Security & Privacy',
-  'Payment Methods',
-  'Email Notifications',
-  'Sustainability Preferences',
+  'Seguridad y privacidad',
+  'Métodos de pago',
+  'Notificaciones por correo',
+  'Preferencias de sustentabilidad',
 ]
 
 export function ProfileOverviewGrid() {
@@ -48,24 +48,24 @@ export function ProfileOverviewGrid() {
       <section className="grid gap-6">
         <article className="rounded-2xl bg-surface-soft p-8">
           <h2 className="mb-6 font-headline text-[1.35rem] font-bold text-headline">
-            Personal Information
+            Información personal
           </h2>
           <dl className="grid gap-5">
             <div>
               <dt className="mb-1 text-[0.64rem] font-bold uppercase tracking-[0.18em] text-text-muted">
-                Email Address
+                Correo electrónico
               </dt>
               <dd className="m-0 font-semibold text-headline">j.vance@atelier-digital.com</dd>
             </div>
             <div>
               <dt className="mb-1 text-[0.64rem] font-bold uppercase tracking-[0.18em] text-text-muted">
-                Shipping Destination
+                Destino de envío
               </dt>
               <dd className="m-0 font-semibold text-headline">Lower East Side, NYC, USA</dd>
             </div>
             <div>
               <dt className="mb-1 text-[0.64rem] font-bold uppercase tracking-[0.18em] text-text-muted">
-                Preferred Size
+                Talle preferido
               </dt>
               <dd className="m-0 font-semibold text-headline">EU 38 / Small</dd>
             </div>
@@ -74,11 +74,11 @@ export function ProfileOverviewGrid() {
 
         <article className="rounded-2xl bg-accent-tertiary p-8">
           <h2 className="mb-4 font-headline text-[1.35rem] font-bold text-headline">
-            Style Profile
+            Perfil de estilo
           </h2>
           <p className="m-0 leading-7 text-[#5d5c57]">
-            Your aesthetic is currently leaning towards <strong>Architectural Minimalism</strong>{' '}
-            with a preference for natural fibers.
+            Tu estética hoy se inclina hacia el <strong>minimalismo arquitectónico</strong> con
+            preferencia por fibras naturales.
           </p>
           <div className="mt-5 flex flex-wrap gap-2">
             {profileTags.map((tag) => (
@@ -97,13 +97,13 @@ export function ProfileOverviewGrid() {
         <article className="rounded-2xl bg-white p-8 shadow-card">
           <div className="mb-6 flex items-center justify-between gap-4">
             <h2 className="m-0 font-headline text-[1.35rem] font-bold text-headline">
-              Recent Orders
+              Pedidos recientes
             </h2>
             <button
               className="border-0 bg-transparent p-0 text-[0.72rem] font-extrabold uppercase tracking-[0.18em] text-accent"
               type="button"
             >
-              View All
+              Ver todos
             </button>
           </div>
 
@@ -122,7 +122,7 @@ export function ProfileOverviewGrid() {
                 </div>
                 <div className="text-right">
                   <strong className="block text-headline">{order.price}</strong>
-                  <span className="text-[0.72rem] font-bold text-accent">Open</span>
+                  <span className="text-[0.72rem] font-bold text-accent">Abrir</span>
                 </div>
               </article>
             ))}
@@ -132,7 +132,7 @@ export function ProfileOverviewGrid() {
         <div className="grid gap-6 xl:grid-cols-2">
           <article className="rounded-2xl bg-surface-soft p-8">
             <h2 className="mb-6 font-headline text-[1.35rem] font-bold text-headline">
-              Saved Pieces
+              Piezas guardadas
             </h2>
             <div className="grid grid-cols-2 gap-4">
               {savedPieces.map((piece) => (
@@ -151,13 +151,13 @@ export function ProfileOverviewGrid() {
               className="mt-4 w-full rounded-xl border border-black/15 bg-transparent px-4 py-4 text-[0.72rem] font-extrabold uppercase tracking-[0.16em] text-headline"
               type="button"
             >
-              Go to Wishlist
+              Ir a lista de deseos
             </button>
           </article>
 
           <article className="rounded-2xl border border-black/10 bg-background p-8">
             <h2 className="mb-6 font-headline text-[1.35rem] font-bold text-headline">
-              Account Settings
+              Configuración de la cuenta
             </h2>
             <div className="grid gap-2">
               {settingsLinks.map((setting) => (
@@ -167,7 +167,7 @@ export function ProfileOverviewGrid() {
                   type="button"
                 >
                   <span>{setting}</span>
-                  <span className="text-[0.72rem] font-bold text-accent">Open</span>
+                  <span className="text-[0.72rem] font-bold text-accent">Abrir</span>
                 </button>
               ))}
             </div>
@@ -176,7 +176,7 @@ export function ProfileOverviewGrid() {
                 className="border-0 bg-transparent p-0 text-[0.72rem] font-extrabold uppercase tracking-[0.18em] text-danger"
                 type="button"
               >
-                Deactivate Account
+                Desactivar cuenta
               </button>
             </div>
           </article>

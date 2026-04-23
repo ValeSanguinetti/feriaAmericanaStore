@@ -65,22 +65,22 @@ export function SiteHeader({ routeKey, variant }: SiteHeaderProps) {
             {routeKey === 'catalog' ? (
               <label className="relative hidden lg:inline-flex lg:items-center">
                 <span className="absolute left-4 text-[0.82rem] text-text-muted/75">
-                  Search
+                  Buscar
                 </span>
                 <input
                   className="w-60 rounded-xl border-0 bg-surface-muted px-4 py-3 pl-16"
-                  placeholder="Search catalog..."
+                  placeholder="Buscar en catálogo..."
                   type="text"
                 />
               </label>
             ) : null}
 
             <button
-              aria-label="Shopping bag"
+              aria-label="Bolso de compras"
               className="inline-flex min-h-10 items-center justify-center border-0 bg-transparent px-3 py-2 text-[0.84rem] font-semibold text-text"
               type="button"
             >
-              Bag
+              Bolso
             </button>
 
             {routeKey === 'landing' ? (
@@ -90,13 +90,13 @@ export function SiteHeader({ routeKey, variant }: SiteHeaderProps) {
                   className="font-semibold text-accent underline decoration-accent/35 underline-offset-4"
                   to="/login"
                 >
-                  Login
+                  Iniciar sesión
                 </Link>
                 <Link
                   className="inline-flex items-center justify-center rounded-xl bg-accent-strong px-4 py-3 text-sm font-semibold text-[#fffaf4] no-underline"
                   to="/register"
                 >
-                  Create Account
+                  Crear cuenta
                 </Link>
               </>
             ) : (
@@ -104,7 +104,7 @@ export function SiteHeader({ routeKey, variant }: SiteHeaderProps) {
                 className="inline-flex min-h-10 items-center justify-center px-3 py-2 text-[0.84rem] font-semibold text-text no-underline"
                 to="/profile"
               >
-                Account
+                Cuenta
               </Link>
             )}
           </div>

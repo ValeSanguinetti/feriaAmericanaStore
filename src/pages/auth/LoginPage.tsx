@@ -2,11 +2,11 @@ import loginBackgroundTexture from '../../assets/login-background-texture.jpg'
 import { LoginForm } from '../../components/auth/LoginForm'
 
 const footerLinks = [
-  'Shipping',
-  'Returns',
-  'Privacy',
-  'Contact',
-  'Sustainability',
+  'Envíos',
+  'Devoluciones',
+  'Privacidad',
+  'Contacto',
+  'Sustentabilidad',
 ]
 
 export default function LoginPage() {
@@ -36,14 +36,14 @@ export default function LoginPage() {
         </nav>
 
         <div className="text-center text-[0.58rem] uppercase tracking-[0.24em] text-[#9a8b8b] md:text-right">
-          &copy; 2024 Feria Americana. Curated quality.
+          &copy; 2024 Feria Americana. Calidad curada.
         </div>
       </footer>
 
       <div className="pointer-events-none absolute inset-x-0 bottom-0 z-0 h-[26rem] overflow-hidden opacity-35">
         <div className="absolute inset-0 bg-gradient-to-t from-[#8b1e2d]/10 to-transparent" />
         <img
-          alt="Abstract fashion fabric texture with soft shadows in beige and deep red tones"
+          alt="Textura abstracta de tela de moda con sombras suaves en tonos beige y rojo profundo"
           className="h-full w-full object-cover mix-blend-multiply"
           src={loginBackgroundTexture}
         />

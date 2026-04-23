@@ -11,22 +11,22 @@ const relatedItems = [
   {
     image: productLookTrouser,
     price: '$185',
-    title: 'Tailored Grey Trouser',
+    title: 'Pantalón gris de sastrería',
   },
   {
     image: productLookKnit,
     price: '$210',
-    title: 'Cream Silk Knit',
+    title: 'Tejido de seda crema',
   },
   {
     image: productLookBoots,
     price: '$350',
-    title: 'Heritage Leather Boot',
+    title: 'Bota de cuero heritage',
   },
   {
     image: productLookBelt,
     price: '$95',
-    title: 'Archival Skinny Belt',
+    title: 'Cinturón fino de archivo',
   },
 ]
 
@@ -37,10 +37,10 @@ const productImages = [
 ]
 
 const footerLinks = [
-  'Privacy Policy',
-  'Terms of Service',
-  'Shipping & Returns',
-  'Contact Us',
+  'Política de privacidad',
+  'Términos de servicio',
+  'Envíos y devoluciones',
+  'Contáctanos',
 ]
 
 export default function ProductDetailPage() {
@@ -55,22 +55,22 @@ export default function ProductDetailPage() {
           </div>
           <nav className="hidden items-center space-x-8 md:flex">
             <Link className="border-b border-[#1a1a1a] pb-1 text-[0.82rem] font-semibold uppercase text-[#1a1a1a] no-underline" to="/catalog">
-              Shop
+              Tienda
             </Link>
             <Link className="text-[0.82rem] font-semibold uppercase text-neutral-500 no-underline transition-colors hover:text-[#8b1e2d]" to="/wishlist">
-              Wishlist
+              Lista de deseos
             </Link>
             <Link className="text-[0.82rem] font-semibold uppercase text-neutral-500 no-underline transition-colors hover:text-[#8b1e2d]" to="/">
-              New Arrivals
+              Novedades
             </Link>
             <Link className="text-[0.82rem] font-semibold uppercase text-neutral-500 no-underline transition-colors hover:text-[#8b1e2d]" to="/catalog">
-              Collections
+              Colecciones
             </Link>
           </nav>
           <div className="flex items-center space-x-6 text-[#241919]">
-            <button className="border-0 bg-transparent p-0" type="button">Search</button>
-            <Link className="border-0 bg-transparent p-0 no-underline text-[#241919]" to="/shopping-cart">Bag</Link>
-            <Link className="border-0 bg-transparent p-0 no-underline text-[#241919]" to="/profile">Profile</Link>
+            <button className="border-0 bg-transparent p-0" type="button">Buscar</button>
+            <Link className="border-0 bg-transparent p-0 no-underline text-[#241919]" to="/shopping-cart">Bolso</Link>
+            <Link className="border-0 bg-transparent p-0 no-underline text-[#241919]" to="/profile">Perfil</Link>
           </div>
         </div>
       </header>
@@ -93,35 +93,35 @@ export default function ProductDetailPage() {
           <div className="col-span-12 md:col-span-5 lg:col-span-4 md:sticky md:top-[120px]">
             <div className="flex flex-col space-y-6">
               <nav className="mb-2 flex text-[0.68rem] uppercase tracking-[0.2em] text-neutral-500">
-                <Link className="no-underline hover:text-[#6b0119]" to="/catalog">Shop</Link>
+                <Link className="no-underline hover:text-[#6b0119]" to="/catalog">Tienda</Link>
                 <span className="mx-2">/</span>
-                <Link className="no-underline hover:text-[#6b0119]" to="/catalog">Outerwear</Link>
+                <Link className="no-underline hover:text-[#6b0119]" to="/catalog">Abrigos</Link>
                 <span className="mx-2">/</span>
-                <span className="text-[#241919]">Vintage Heritage</span>
+                <span className="text-[#241919]">Herencia vintage</span>
               </nav>
 
               <div className="space-y-2">
                 <h1 className="text-[2.2rem] font-semibold text-[#241919]">
-                  The 1974 Archival Wool Coat
+                  Abrigo de lana de archivo 1974
                 </h1>
                 <p className="text-[1.6rem] font-semibold text-[#a93342]">$420</p>
               </div>
 
               <div className="border-t border-neutral-200 pt-6">
                 <p className="text-[1rem] leading-7 text-[#574142]">
-                  A curated masterpiece from our archival collection. This double-breasted silhouette
-                  features hand-finished seams, authentic horn buttons, and a weight that commands
-                  presence. Sourced from a private estate in Florence, it represents the pinnacle of
-                  1970s sartorial craftsmanship.
+                  Una obra maestra curada de nuestra colección de archivo. Esta silueta cruzada
+                  presenta costuras terminadas a mano, auténticos botones de cuerno y un peso que
+                  impone presencia. Procedente de una colección privada en Florencia, representa la
+                  cumbre de la sastrería de los años 70.
                 </p>
               </div>
 
               <div className="space-y-2">
                 <div className="flex items-center justify-between">
                   <span className="text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-[#241919]">
-                    Select Size
+                    Seleccionar talle
                   </span>
-                  <a className="text-[0.72rem] uppercase text-neutral-500" href="/">Size Guide</a>
+                  <a className="text-[0.72rem] uppercase text-neutral-500" href="/">Guía de talles</a>
                 </div>
                 <div className="flex flex-wrap gap-3">
                   <button className="flex h-14 w-14 items-center justify-center border border-neutral-200 text-[0.82rem] font-semibold transition-colors hover:border-[#241919]" type="button">
@@ -141,35 +141,35 @@ export default function ProductDetailPage() {
 
               <div className="flex flex-col space-y-3 pt-4">
                 <Link className="block w-full bg-[#8b1e2d] py-5 text-center text-[0.8rem] font-semibold uppercase tracking-[0.22em] text-white no-underline transition hover:opacity-90 active:scale-[0.98]" to="/shopping-cart">
-                  Add to Bag
+                  Agregar al bolso
                 </Link>
                 <Link className="flex w-full items-center justify-center gap-2 border border-[#241919] py-5 text-[0.8rem] font-semibold uppercase tracking-[0.22em] text-[#241919] no-underline transition hover:bg-[#241919] hover:text-white" to="/wishlist">
                   <span aria-hidden="true">Heart</span>
-                  Add to Wishlist
+                  Agregar a lista de deseos
                 </Link>
               </div>
 
               <div className="space-y-4 pt-6">
                 <details className="group border-t border-neutral-200" open>
                   <summary className="flex cursor-pointer list-none items-center justify-between py-4 text-[0.8rem] font-semibold uppercase tracking-[0.18em]">
-                    Product Details
+                    Detalles del producto
                     <span className="transition-transform group-open:rotate-180">⌄</span>
                   </summary>
                   <div className="space-y-2 pb-4 text-[1rem] text-[#574142]">
-                    <p>• 100% Virgin Wool</p>
-                    <p>• Silk-blend inner lining</p>
-                    <p>• Dry clean only</p>
-                    <p>• Made in Italy</p>
+                    <p>• 100% lana virgen</p>
+                    <p>• Forro interior mezcla de seda</p>
+                    <p>• Solo limpieza en seco</p>
+                    <p>• Hecho en Italia</p>
                   </div>
                 </details>
                 <details className="group border-y border-neutral-200" open>
                   <summary className="flex cursor-pointer list-none items-center justify-between py-4 text-[0.8rem] font-semibold uppercase tracking-[0.18em]">
-                    Shipping & Returns
+                    Envíos y devoluciones
                     <span className="transition-transform group-open:rotate-180">⌄</span>
                   </summary>
                   <div className="pb-4 text-[1rem] text-[#574142]">
-                    Complimentary express shipping on all vintage archival pieces. Returns
-                    accepted within 14 days of delivery in original condition.
+                    Envío exprés de cortesía en todas las piezas vintage de archivo. Se aceptan
+                    devoluciones dentro de los 14 días de la entrega en condición original.
                   </div>
                 </details>
               </div>
@@ -179,7 +179,7 @@ export default function ProductDetailPage() {
 
         <section className="mt-20">
           <h2 className="mb-12 border-b border-neutral-100 pb-6 text-[2rem] font-semibold uppercase tracking-[-0.03em] text-[#241919]">
-            Complete the Look
+            Completa el look
           </h2>
           <div className="grid grid-cols-1 gap-6 md:grid-cols-4">
             {relatedItems.map((item) => (
@@ -219,7 +219,7 @@ export default function ProductDetailPage() {
             ))}
           </div>
           <div className="text-sm uppercase tracking-wide text-neutral-500">
-            &copy; 2024 Feria Americana. Curated Quality.
+            &copy; 2024 Feria Americana. Calidad curada.
           </div>
         </div>
       </footer>

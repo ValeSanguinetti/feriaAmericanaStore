@@ -7,7 +7,7 @@ export default function RegisterPage() {
       <main className="flex min-h-svh flex-1 flex-col md:flex-row">
         <section className="relative hidden items-center justify-center overflow-hidden bg-zinc-100 md:flex md:w-1/2 lg:w-3/5">
           <img
-            alt="High-fashion editorial portrait of a woman in a structural red coat standing against a minimalist beige concrete wall"
+            alt="Retrato editorial de alta moda de una mujer con un abrigo rojo estructurado frente a un muro minimalista de hormigón beige"
             className="absolute inset-0 h-full w-full object-cover grayscale-[20%]"
             src={editorialImage}
           />
@@ -17,8 +17,8 @@ export default function RegisterPage() {
               Feria Americana
             </h1>
             <p className="mt-4 mb-0 text-[1.05rem] leading-8 tracking-[0.02em] text-white/95">
-              Curated Quality. Timeless Style. Join our editorial community of vintage
-              connoisseurs.
+              Calidad curada. Estilo atemporal. Únete a nuestra comunidad editorial de amantes
+              del vintage.
             </p>
           </div>
         </section>
@@ -39,11 +39,11 @@ export default function RegisterPage() {
       <footer className="w-full border-t border-zinc-100 bg-zinc-50 py-2 md:fixed md:bottom-0">
         <div className="mx-auto flex max-w-[1440px] flex-col items-center justify-between gap-3 px-6 opacity-40 md:flex-row md:px-16">
           <span className="text-[0.58rem] uppercase tracking-[0.24em]">
-            &copy; 2024 Feria Americana. Curated quality.
+            &copy; 2024 Feria Americana. Calidad curada.
           </span>
           <div className="flex gap-6 text-[0.58rem] uppercase tracking-[0.24em]">
-            <span>Sustainability</span>
-            <span>Privacy</span>
+            <span>Sustentabilidad</span>
+            <span>Privacidad</span>
           </div>
         </div>
       </footer>

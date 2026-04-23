@@ -6,20 +6,20 @@ export function validateRequired(value: string, message: string) {
 
 export function validateEmail(value: string) {
   if (!value.trim()) {
-    return 'Enter your email address.'
+    return 'Ingresa tu correo electrónico.'
   }
 
-  return emailPattern.test(value) ? '' : 'Use a valid email address.'
+  return emailPattern.test(value) ? '' : 'Usa un correo electrónico válido.'
 }
 
 export function validatePassword(value: string) {
   if (!value) {
-    return 'Create a password.'
+    return 'Crea una contraseña.'
   }
 
-  return value.length >= 8 ? '' : 'Password must be at least 8 characters.'
+  return value.length >= 8 ? '' : 'La contraseña debe tener al menos 8 caracteres.'
 }
 
 export function validateLoginPassword(value: string) {
-  return value ? '' : 'Enter your password.'
+  return value ? '' : 'Ingresa tu contraseña.'
 }

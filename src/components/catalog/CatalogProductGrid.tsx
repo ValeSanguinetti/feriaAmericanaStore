@@ -7,41 +7,41 @@ import catalogProduct6 from '../../assets/catalog-product-6.png'
 
 const products = [
   {
-    color: 'Sable Beige',
+    color: 'Beige sable',
     image: catalogProduct1,
     price: '$1,240',
-    title: 'Structured Wool Overcoat',
+    title: 'Abrigo estructurado de lana',
   },
   {
-    badge: 'Limited Edition',
-    color: 'Deep Navy',
+    badge: 'Edición limitada',
+    color: 'Azul marino profundo',
     image: catalogProduct2,
     price: '$480',
-    title: 'Essential Silk Poplin',
+    title: 'Popelina de seda esencial',
   },
   {
-    color: 'Charcoal Grey',
+    color: 'Gris carbón',
     image: catalogProduct3,
     price: '$620',
-    title: 'Wide-Leg Drape Trouser',
+    title: 'Pantalón amplio con caída',
   },
   {
-    color: 'Bone White',
+    color: 'Blanco hueso',
     image: catalogProduct4,
     price: '$890',
-    title: 'Mohair Blend Cardigan',
+    title: 'Cárdigan de mezcla de mohair',
   },
   {
-    color: 'Optical White',
+    color: 'Blanco óptico',
     image: catalogProduct5,
     price: '$550',
-    title: 'Sculpt Low Sneaker',
+    title: 'Zapatilla baja sculpt',
   },
   {
-    color: 'Onyx Black',
+    color: 'Negro ónix',
     image: catalogProduct6,
     price: '$1,550',
-    title: 'Nappa Leather Bucket Bag',
+    title: 'Bolso bucket de cuero napa',
   },
 ]
 
@@ -51,20 +51,20 @@ export function CatalogProductGrid() {
       <div className="mb-10 flex flex-wrap items-end justify-between gap-4">
         <div>
           <span className="mb-2 block text-[0.68rem] font-bold uppercase tracking-[0.22em] text-accent">
-            Spring / Summer 2024
+            Primavera / Verano 2024
           </span>
           <h1 className="m-0 font-headline text-[clamp(2.8rem,4vw,4rem)] leading-[0.95] font-extrabold tracking-[-0.05em] text-headline">
-            The Full Catalog
+            El catálogo completo
           </h1>
         </div>
         <div className="flex flex-wrap items-center gap-4 text-text-muted">
-          <p className="m-0">Showing 184 products</p>
+          <p className="m-0">Mostrando 184 productos</p>
           <div className="h-4 w-px bg-black/15" />
-          <select className="border-0 bg-transparent font-bold text-headline" defaultValue="Sort by Featured">
-            <option>Sort by Featured</option>
-            <option>Price: Low to High</option>
-            <option>Price: High to Low</option>
-            <option>Newest First</option>
+          <select className="border-0 bg-transparent font-bold text-headline" defaultValue="Ordenar por destacados">
+            <option>Ordenar por destacados</option>
+            <option>Precio: menor a mayor</option>
+            <option>Precio: mayor a menor</option>
+            <option>Más recientes</option>
           </select>
         </div>
       </div>
@@ -87,7 +87,7 @@ export function CatalogProductGrid() {
                 className="absolute right-4 bottom-4 h-11 w-11 rounded-full bg-white/95 text-[0.76rem] font-bold text-headline"
                 type="button"
               >
-                Save
+                Guardar
               </button>
             </div>
             <div className="flex items-start justify-between gap-4">
@@ -103,7 +103,7 @@ export function CatalogProductGrid() {
               className="rounded-xl bg-accent-strong px-4 py-4 text-[0.74rem] font-extrabold uppercase tracking-[0.18em] text-[#fffaf4]"
               type="button"
             >
-              Add to Bag
+              Agregar al bolso
             </button>
           </article>
         ))}
@@ -111,7 +111,7 @@ export function CatalogProductGrid() {
 
       <div className="mt-12 flex items-center justify-center gap-4">
         <button className="rounded-full border border-black/15 px-4 py-3 font-bold text-headline" type="button">
-          Prev
+          Ant
         </button>
         <div className="flex gap-2">
           <button className="rounded-full bg-surface-muted px-4 py-3 font-bold text-headline" type="button">
@@ -125,7 +125,7 @@ export function CatalogProductGrid() {
           </button>
         </div>
         <button className="rounded-full border border-black/15 px-4 py-3 font-bold text-headline" type="button">
-          Next
+          Sig
         </button>
       </div>
     </section>

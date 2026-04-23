@@ -20,7 +20,7 @@ describe('App routing', () => {
     renderAppAt('/')
 
     expect(await screen.findByText(/The Silent/i)).toBeInTheDocument()
-    expect(screen.getByRole('link', { name: /Create Account/i })).toBeInTheDocument()
+    expect(screen.getByRole('link', { name: /Crear cuenta/i })).toBeInTheDocument()
     expect(screen.getByText(/All rights reserved/i)).toBeInTheDocument()
   })
 
@@ -29,7 +29,7 @@ describe('App routing', () => {
 
     expect(await screen.findByRole('heading', { name: /The Full Catalog/i })).toBeInTheDocument()
     expect(screen.getByRole('link', { name: /Account/i })).toBeInTheDocument()
-    expect(screen.getByPlaceholderText(/Search catalog/i)).toBeInTheDocument()
+    expect(screen.getByPlaceholderText(/Buscar en catálogo/i)).toBeInTheDocument()
   })
 
   it('keeps the prepared protected route accessible while auth is disabled', async () => {
@@ -37,14 +37,14 @@ describe('App routing', () => {
 
     expect(await screen.findByRole('heading', { name: /Julianna Vance/i })).toBeInTheDocument()
     expect(screen.getByRole('heading', { name: /Recent Orders/i })).toBeInTheDocument()
-    expect(screen.getByRole('link', { name: /Profile/i })).toBeInTheDocument()
+    expect(screen.getByRole('link', { name: /Perfil/i })).toBeInTheDocument()
   })
 
   it('renders the login route through the auth layout', async () => {
     renderAppAt('/login')
 
     expect(await screen.findByRole('heading', { name: /Welcome Back/i })).toBeInTheDocument()
-    expect(screen.getByRole('button', { name: /^Login$/i })).toBeInTheDocument()
+    expect(screen.getByRole('button', { name: /^Iniciar sesión$/i })).toBeInTheDocument()
     expect(screen.getByText(/All rights reserved/i)).toBeInTheDocument()
   })
 

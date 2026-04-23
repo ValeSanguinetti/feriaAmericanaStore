@@ -7,12 +7,12 @@ import wishlistItem4 from '../../assets/wishlist-item-4.jpg'
 
 const wishlistItems = [
   { image: wishlistItem1, price: '$245.00', title: '1970s Wool Trench Coat' },
-  { image: wishlistItem2, price: '$180.00', title: 'Artisan Leather Satchel' },
-  { image: wishlistItem3, price: '$65.00', title: 'Hand-Painted Silk Scarf' },
-  { image: wishlistItem4, price: '$120.00', title: '1960s Oversized Frames' },
+  { image: wishlistItem2, price: '$180.00', title: 'Cartera artesanal de cuero' },
+  { image: wishlistItem3, price: '$65.00', title: 'Pañuelo de seda pintado a mano' },
+  { image: wishlistItem4, price: '$120.00', title: 'Armazones oversize de los 60' },
 ]
 
-const footerLinks = ['Privacy Policy', 'Terms of Service', 'Shipping & Returns', 'Contact Us']
+const footerLinks = ['Política de privacidad', 'Términos de servicio', 'Envíos y devoluciones', 'Contáctanos']
 
 export default function WishlistPage() {
   return (
@@ -24,24 +24,24 @@ export default function WishlistPage() {
           </Link>
           <div className="hidden items-center space-x-12 md:flex">
             <Link className="text-neutral-500 no-underline transition-colors hover:text-[#8b1e2d]" to="/catalog">
-              Shop
+              Tienda
             </Link>
             <Link className="border-b border-[#1a1a1a] pb-1 text-[#1a1a1a] no-underline" to="/wishlist">
-              Wishlist
+              Lista de deseos
             </Link>
             <Link className="text-neutral-500 no-underline transition-colors hover:text-[#8b1e2d]" to="/">
-              New Arrivals
+              Novedades
             </Link>
             <Link className="text-neutral-500 no-underline transition-colors hover:text-[#8b1e2d]" to="/catalog">
-              Collections
+              Colecciones
             </Link>
           </div>
           <div className="flex items-center space-x-6">
             <Link className="text-neutral-800 no-underline transition-opacity hover:opacity-80" to="/shopping-cart">
-              Bag
+              Bolso
             </Link>
             <Link className="text-neutral-800 no-underline transition-opacity hover:opacity-80" to="/profile">
-              Profile
+              Perfil
             </Link>
           </div>
         </div>
@@ -52,16 +52,16 @@ export default function WishlistPage() {
           <div className="flex flex-col gap-6 border-b border-[#debfbf] pb-6 md:flex-row md:items-end md:justify-between">
             <div>
               <span className="mb-2 block text-[0.68rem] uppercase tracking-[0.22em] text-[#a93342]">
-                Private Collection
+                Colección privada
               </span>
               <h1 className="text-[clamp(2.8rem,6vw,4.2rem)] font-bold tracking-[-0.04em] text-[#241919]">
-                Your Wishlist
+                Tu lista de deseos
               </h1>
             </div>
             <div className="flex items-center gap-6">
-              <p className="text-[1rem] text-[#574142]">4 Curated Items Saved</p>
+              <p className="text-[1rem] text-[#574142]">4 artículos curados guardados</p>
               <button className="border border-[#241919] px-6 py-2 text-[0.8rem] font-semibold uppercase tracking-[0.18em] transition-colors hover:bg-[#241919] hover:text-white" type="button">
-                Share List
+                Compartir lista
               </button>
             </div>
           </div>
@@ -87,7 +87,7 @@ export default function WishlistPage() {
                       className="block w-full bg-[#8b1e2d] py-4 text-center text-[0.8rem] font-semibold uppercase tracking-[0.18em] text-white no-underline"
                       to="/shopping-cart"
                     >
-                      Move to Bag
+                      Mover al bolso
                     </Link>
                   </div>
                 </div>
@@ -107,21 +107,21 @@ export default function WishlistPage() {
         <section className="border-t border-[#debfbf] py-20">
           <div className="flex flex-col gap-6 md:flex-row">
             <div className="flex flex-1 flex-col items-start justify-center space-y-6 bg-[#ffe9e8] p-12">
-              <h2 className="text-[2rem] font-semibold text-[#241919]">Complete Your Look</h2>
+              <h2 className="text-[2rem] font-semibold text-[#241919]">Completa tu look</h2>
               <p className="max-w-md text-[1.05rem] leading-8 text-[#574142]">
-                Our new &apos;Midnight Gallery&apos; collection just arrived. Pieces that pair
-                perfectly with your saved items.
+                Nuestra nueva colección &apos;Midnight Gallery&apos; acaba de llegar. Piezas que
+                combinan perfecto con tus artículos guardados.
               </p>
               <Link
                 className="border-b-2 border-[#6b0119] pb-1 text-[0.8rem] font-semibold uppercase tracking-[0.2em] text-[#6b0119] no-underline transition-opacity hover:opacity-80"
                 to="/catalog"
               >
-                Explore Collections
+                Explorar colecciones
               </Link>
             </div>
             <div className="flex-1 overflow-hidden aspect-video md:aspect-auto">
               <img
-                alt="Editorial fashion"
+                alt="Moda editorial"
                 className="h-full w-full object-cover"
                 src={wishlistEditorial}
               />
@@ -144,7 +144,7 @@ export default function WishlistPage() {
               </Link>
             ))}
           </div>
-          <div className="normal-case text-neutral-500">&copy; 2024 Feria Americana. Curated Quality.</div>
+          <div className="normal-case text-neutral-500">&copy; 2024 Feria Americana. Calidad curada.</div>
         </div>
       </footer>
     </div>

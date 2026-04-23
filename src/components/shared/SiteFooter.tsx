@@ -3,11 +3,11 @@ type SiteFooterProps = {
 }
 
 const footerLinks = [
-  'Sustainability',
-  'Shipping',
-  'Returns',
-  'Privacy Policy',
-  'Terms of Service',
+  'Sustentabilidad',
+  'Envíos',
+  'Devoluciones',
+  'Política de privacidad',
+  'Términos de servicio',
 ]
 
 export function SiteFooter({ showSocialLinks = false }: SiteFooterProps) {
@@ -18,7 +18,7 @@ export function SiteFooter({ showSocialLinks = false }: SiteFooterProps) {
           L&apos;ATELIER
         </span>
         <p className="m-0 text-xs font-semibold uppercase tracking-[0.16em] text-text-muted">
-          &copy; 2024 L&apos;ATELIER DIGITAL. All rights reserved.
+          &copy; 2024 L&apos;ATELIER DIGITAL. Todos los derechos reservados.
         </p>
       </div>
 
@@ -43,18 +43,18 @@ export function SiteFooter({ showSocialLinks = false }: SiteFooterProps) {
           aria-label="Social links"
         >
           <a
-            aria-label="Share"
+            aria-label="Compartir"
             className="text-xs font-semibold uppercase tracking-[0.16em] text-text-muted no-underline transition-colors hover:text-headline"
             href="/"
           >
-            Share
+            Compartir
           </a>
           <a
-            aria-label="Email"
+            aria-label="Correo"
             className="text-xs font-semibold uppercase tracking-[0.16em] text-text-muted no-underline transition-colors hover:text-headline"
             href="/"
           >
-            Email
+            Correo
           </a>
         </div>
       ) : null}

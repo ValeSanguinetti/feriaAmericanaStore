@@ -8,23 +8,23 @@ import landingProductShirt from '../../assets/landing-product-shirt.jpg'
 import landingProductTote from '../../assets/landing-product-tote.jpg'
 import landingProductTrench from '../../assets/landing-product-trench.jpg'
 
-const navItems = ['New Arrivals', 'Collections', 'Vintage', 'Editorial']
+const navItems = ['Novedades', 'Colecciones', 'Vintage', 'Editorial']
 
 const curationCards = [
   {
-    buttonLabel: 'Explore',
-    description: 'Italian-sourced, carbon-neutral tailoring.',
+    buttonLabel: 'Explorar',
+    description: 'Sastrería de origen italiano y carbono neutral.',
     image: landingCurationWool,
-    title: 'Sustainable Wool',
+    title: 'Lana sostenible',
     wide: true,
   },
   {
     image: landingCurationFootwear,
-    title: 'Footwear',
+    title: 'Calzado',
   },
   {
     image: landingCurationAccessories,
-    title: 'Accessories',
+    title: 'Accesorios',
   },
 ]
 
@@ -33,28 +33,28 @@ const arrivals = [
     badge: 'Vintage',
     image: landingProductTrench,
     price: '$450.00',
-    title: 'Heritage Trench Coat',
+    title: 'Trench coat heritage',
   },
   {
     image: landingProductTote,
     price: '$320.00',
-    title: 'Structured Leather Tote',
+    title: 'Bolso tote de cuero estructurado',
   },
   {
-    badge: 'Sold Out',
+    badge: 'Agotado',
     image: landingProductShirt,
     muted: true,
     price: '$185.00',
-    title: 'Oxford Cotton Shirt',
+    title: 'Camisa Oxford de algodón',
   },
   {
     image: landingProductDenim,
     price: '$210.00',
-    title: 'Raw Edge Denim',
+    title: 'Denim de borde crudo',
   },
 ]
 
-const footerLinks = ['Shipping', 'Returns', 'Privacy', 'Contact', 'Sustainability']
+const footerLinks = ['Envíos', 'Devoluciones', 'Privacidad', 'Contacto', 'Sustentabilidad']
 
 export default function LandingPage() {
   return (
@@ -88,24 +88,24 @@ export default function LandingPage() {
 
           <div className="flex items-center gap-4 sm:gap-6">
             <button
-              aria-label="Search"
+              aria-label="Buscar"
               className="border-0 bg-transparent p-0 text-zinc-900"
               type="button"
             >
-              Search
+              Buscar
             </button>
             <span className="hidden h-4 w-px bg-zinc-200 sm:block" />
             <Link
               className="hidden text-[0.8rem] font-semibold uppercase tracking-[0.18em] text-zinc-900 no-underline transition-colors hover:text-[#6b0119] sm:inline"
               to="/login"
             >
-              Login
+              Iniciar sesión
             </Link>
             <Link
               className="inline-flex items-center justify-center rounded-[4px] bg-[#8b1e2d] px-4 py-2.5 text-[0.74rem] font-semibold uppercase tracking-[0.2em] text-white no-underline transition hover:opacity-95 sm:px-6"
               to="/register"
             >
-              Create Account
+              Crear cuenta
             </Link>
           </div>
         </div>
@@ -115,7 +115,7 @@ export default function LandingPage() {
         <section className="relative flex min-h-[700px] items-center overflow-hidden bg-zinc-950 lg:h-[921px]">
           <div className="absolute inset-0 opacity-80">
             <img
-              alt="Editorial fashion photography of a model in a luxury minimalist coat standing in a brutalist concrete setting"
+              alt="Fotografía editorial de moda de un modelo con un abrigo minimalista de lujo en un entorno brutalista"
               className="h-full w-full object-cover"
               src={landingHeroEditorial}
             />
@@ -125,30 +125,30 @@ export default function LandingPage() {
           <div className="relative z-10 mx-auto w-full max-w-[1440px] px-4 py-20 sm:px-6 lg:px-16">
             <div className="max-w-2xl">
               <span className="mb-8 inline-block bg-[#8b1e2d] px-4 py-1.5 text-[0.72rem] font-semibold uppercase tracking-[0.2em] text-white">
-                Limited Edition
+                Edición limitada
               </span>
               <h1 className="m-0 text-[clamp(3.4rem,9vw,5.8rem)] leading-[0.92] font-bold uppercase text-white">
-                Autumn
+                Otoño
                 <br />
-                Winter <span className="font-light italic">2024</span>
+                Invierno <span className="font-light italic">2024</span>
               </h1>
               <p className="mt-6 mb-10 max-w-lg text-[1.02rem] leading-8 text-zinc-300">
-                Discover our curated selection of high-end editorial vintage and contemporary
-                pieces. Quality defined by time, curated for the modern individual.
+                Descubre nuestra selección curada de piezas editoriales vintage y contemporáneas
+                de alta gama. Calidad definida por el tiempo, curada para la persona moderna.
               </p>
               <div className="flex flex-wrap items-center gap-4 sm:gap-6">
                 <Link
                   className="inline-flex items-center justify-center gap-3 rounded-[4px] bg-[#8b1e2d] px-8 py-4 text-[0.78rem] font-semibold uppercase tracking-[0.22em] text-white no-underline transition hover:opacity-95 sm:px-10"
                   to="/catalog"
                 >
-                  Explore Collection
+                  Explorar colección
                   <span aria-hidden="true">→</span>
                 </Link>
                 <a
                   className="inline-flex items-center justify-center rounded-[4px] border border-white px-8 py-4 text-[0.78rem] font-semibold uppercase tracking-[0.22em] text-white no-underline transition hover:bg-white hover:text-zinc-950 sm:px-10"
                   href="#our-story"
                 >
-                  Our Story
+                  Nuestra historia
                 </a>
               </div>
             </div>
@@ -156,7 +156,7 @@ export default function LandingPage() {
 
           <div className="absolute right-4 bottom-12 hidden items-end gap-2 text-[0.68rem] uppercase tracking-[0.22em] text-white/50 lg:flex lg:right-16">
             <div className="flex flex-col items-end gap-2">
-              <span>Scroll to explore</span>
+              <span>Desliza para explorar</span>
               <div className="relative h-12 w-px overflow-hidden bg-white/20">
                 <div className="absolute inset-0 origin-top animate-pulse bg-white" />
               </div>
@@ -168,17 +168,17 @@ export default function LandingPage() {
           <div className="mb-16 flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
             <div>
               <h2 className="m-0 text-[clamp(2.8rem,6vw,4.8rem)] uppercase tracking-[-0.06em]">
-                The Curation
+                La curaduría
               </h2>
               <p className="m-0 mt-2 text-[1.05rem] text-zinc-500">
-                Exceptional pieces handpicked for the season.
+                Piezas excepcionales seleccionadas a mano para la temporada.
               </p>
             </div>
             <a
               className="w-fit border-b-2 border-[#8b1e2d] pb-1 text-[0.78rem] font-semibold uppercase tracking-[0.22em] text-[#8b1e2d] no-underline"
               href="/"
             >
-              View All Arrivals
+              Ver todas las novedades
             </a>
           </div>
 
@@ -241,7 +241,7 @@ export default function LandingPage() {
           <div className="mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-16">
             <div className="mb-16 text-center">
               <h2 className="m-0 text-[clamp(2.8rem,6vw,4.8rem)] uppercase tracking-[-0.06em]">
-                New Arrivals
+                Novedades
               </h2>
               <div className="mx-auto mt-4 h-1 w-12 bg-[#8b1e2d]" />
             </div>
@@ -260,7 +260,7 @@ export default function LandingPage() {
                       <div className="absolute top-4 left-4">
                         <span
                           className={
-                            item.badge === 'Sold Out'
+                            item.badge === 'Agotado'
                               ? 'bg-[#8b1e2d] px-3 py-1 text-[0.68rem] font-semibold uppercase tracking-[0.2em] text-white'
                               : 'bg-white px-3 py-1 text-[0.68rem] font-semibold uppercase tracking-[0.2em] text-zinc-950'
                           }
@@ -275,8 +275,8 @@ export default function LandingPage() {
                         className="absolute right-4 bottom-4 left-4 flex translate-y-12 items-center justify-center gap-2 bg-zinc-950 py-3 text-[0.7rem] font-semibold uppercase tracking-[0.2em] text-white opacity-0 transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100"
                         type="button"
                       >
-                        <span aria-hidden="true">Bag</span>
-                        Quick Add
+                        <span aria-hidden="true">Bolso</span>
+                        Añadir rápido
                       </button>
                     ) : null}
                   </div>
@@ -296,23 +296,23 @@ export default function LandingPage() {
         <section id="our-story" className="mx-auto max-w-[1440px] px-4 py-20 text-center sm:px-6 lg:px-16">
           <div className="mx-auto max-w-2xl">
             <h2 className="m-0 text-[2.1rem] uppercase tracking-[-0.04em] sm:text-[2.5rem]">
-              Join the Circle
+              Únete al círculo
             </h2>
             <p className="mt-6 mb-10 text-[1rem] leading-7 text-zinc-500">
-              Receive early access to seasonal drops and exclusive editorial content directly in
-              your inbox.
+              Recibe acceso anticipado a lanzamientos de temporada y contenido editorial
+              exclusivo directamente en tu correo.
             </p>
             <form className="flex flex-col gap-4 md:flex-row">
               <input
                 className="min-w-0 flex-1 border border-zinc-200 bg-white px-6 py-4 text-[0.74rem] uppercase tracking-[0.2em] outline-none transition focus:border-zinc-950"
-                placeholder="Your Email Address"
+                placeholder="Tu correo electrónico"
                 type="email"
               />
               <button
                 className="bg-zinc-950 px-8 py-4 text-[0.78rem] font-semibold uppercase tracking-[0.22em] text-white transition hover:bg-[#6b0119]"
                 type="submit"
               >
-                Subscribe
+                Suscribirse
               </button>
             </form>
           </div>
@@ -326,7 +326,7 @@ export default function LandingPage() {
               Feria <span className="text-[#8b1e2d]">Americana</span>
             </div>
             <div className="text-[0.58rem] uppercase tracking-[0.24em] text-zinc-400">
-              &copy; 2024 Feria Americana. Curated quality.
+              &copy; 2024 Feria Americana. Calidad curada.
             </div>
           </div>
 
@@ -344,13 +344,13 @@ export default function LandingPage() {
 
           <div className="flex gap-6 text-zinc-400">
             <a className="no-underline transition-colors hover:text-zinc-950" href="/">
-              Public
+              Público
             </a>
             <a className="no-underline transition-colors hover:text-zinc-950" href="/">
-              Share
+              Compartir
             </a>
             <a className="no-underline transition-colors hover:text-zinc-950" href="/">
-              Mail
+              Correo
             </a>
           </div>
         </div>

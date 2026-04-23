@@ -8,18 +8,18 @@ import cartRelatedShirt from '../../assets/shopping-cart-related-shirt.jpg'
 
 const cartItems = [
   {
-    category: 'Vintage Collection',
-    details: 'Midnight Blue | Size L',
+    category: 'Colección vintage',
+    details: 'Azul medianoche | Talle L',
     image: cartItem1,
     price: '$345.00',
-    title: 'Structured Wool Overcoat',
+    title: 'Abrigo estructurado de lana',
   },
   {
-    category: 'Footwear',
-    details: 'Cognac Leather | Size 42',
+    category: 'Calzado',
+    details: 'Cuero coñac | Talle 42',
     image: cartItem2,
     price: '$280.00',
-    title: 'Artisan Chelsea Boots',
+    title: 'Botas chelsea artesanales',
   },
 ]
 
@@ -27,30 +27,30 @@ const relatedItems = [
   {
     image: cartRelatedScarf,
     price: '$120.00',
-    title: 'Hand-Painted Silk Scarf',
+    title: 'Pañuelo de seda pintado a mano',
   },
   {
     image: cartRelatedHat,
     price: '$185.00',
-    title: 'Wide-Brim Felt Fedora',
+    title: 'Fedora de fieltro de ala ancha',
   },
   {
     image: cartRelatedShirt,
     price: '$145.00',
-    title: 'Organic Cotton Tailored Shirt',
+    title: 'Camisa de algodón orgánico a medida',
   },
   {
     image: cartRelatedBag,
     price: '$420.00',
-    title: 'Structured Leather Tote',
+    title: 'Bolso tote de cuero estructurado',
   },
 ]
 
 const footerLinks = [
-  'Privacy Policy',
-  'Terms of Service',
-  'Shipping & Returns',
-  'Contact Us',
+  'Política de privacidad',
+  'Términos de servicio',
+  'Envíos y devoluciones',
+  'Contáctanos',
 ]
 
 export default function ShoppingCartPage() {
@@ -64,14 +64,14 @@ export default function ShoppingCartPage() {
             </Link>
           </div>
           <nav className="hidden items-center space-x-8 md:flex">
-            <Link className="text-sm text-neutral-500 no-underline transition-colors hover:text-[#8b1e2d]" to="/catalog">Shop</Link>
-            <Link className="text-sm text-neutral-500 no-underline transition-colors hover:text-[#8b1e2d]" to="/wishlist">Wishlist</Link>
-            <Link className="text-sm text-neutral-500 no-underline transition-colors hover:text-[#8b1e2d]" to="/">New Arrivals</Link>
-            <Link className="text-sm text-neutral-500 no-underline transition-colors hover:text-[#8b1e2d]" to="/catalog">Collections</Link>
+            <Link className="text-sm text-neutral-500 no-underline transition-colors hover:text-[#8b1e2d]" to="/catalog">Tienda</Link>
+            <Link className="text-sm text-neutral-500 no-underline transition-colors hover:text-[#8b1e2d]" to="/wishlist">Lista de deseos</Link>
+            <Link className="text-sm text-neutral-500 no-underline transition-colors hover:text-[#8b1e2d]" to="/">Novedades</Link>
+            <Link className="text-sm text-neutral-500 no-underline transition-colors hover:text-[#8b1e2d]" to="/catalog">Colecciones</Link>
           </nav>
           <div className="flex items-center space-x-6 text-[#8b1e2d]">
-            <button className="border-0 bg-transparent p-0 font-semibold" type="button">Bag</button>
-            <Link className="border-0 bg-transparent p-0 text-[#8b1e2d] no-underline" to="/profile">Profile</Link>
+            <button className="border-0 bg-transparent p-0 font-semibold" type="button">Bolso</button>
+            <Link className="border-0 bg-transparent p-0 text-[#8b1e2d] no-underline" to="/profile">Perfil</Link>
           </div>
         </div>
       </header>
@@ -79,10 +79,10 @@ export default function ShoppingCartPage() {
       <main className="mx-auto max-w-[1440px] px-4 pt-[120px] pb-20 sm:px-6 lg:px-16">
         <div className="mb-12">
           <h1 className="text-[clamp(2.8rem,6vw,4.2rem)] font-bold tracking-[-0.04em] text-[#241919]">
-            Your Shopping Bag
+            Tu bolso de compras
           </h1>
           <p className="mt-2 text-[1.05rem] text-[#574142]">
-            Carefully curated selections for your collection.
+            Selecciones cuidadosamente curadas para tu colección.
           </p>
         </div>
 
@@ -106,7 +106,7 @@ export default function ShoppingCartPage() {
                       <p className="text-[1rem] text-[#574142]">{item.details}</p>
                     </div>
                     <button className="border-0 bg-transparent p-0 text-[#574142] transition-colors hover:text-[#ba1a1a]" type="button">
-                      Delete
+                      Eliminar
                     </button>
                   </div>
                   <div className="mt-4 flex items-end justify-between">
@@ -124,18 +124,18 @@ export default function ShoppingCartPage() {
 
           <div className="col-span-12 lg:col-span-4">
             <div className="sticky top-[120px] rounded border border-[#eaeaea] bg-white p-6">
-              <h2 className="mb-6 text-[1.5rem] font-semibold text-[#241919]">Order Summary</h2>
+              <h2 className="mb-6 text-[1.5rem] font-semibold text-[#241919]">Resumen del pedido</h2>
               <div className="mb-6 space-y-4">
                 <div className="flex justify-between text-[1rem]">
                   <span className="text-[#574142]">Subtotal</span>
                   <span>$625.00</span>
                 </div>
                 <div className="flex justify-between text-[1rem]">
-                  <span className="text-[#574142]">Estimated Shipping</span>
+                  <span className="text-[#574142]">Envío estimado</span>
                   <span>$15.00</span>
                 </div>
                 <div className="flex justify-between text-[1rem]">
-                  <span className="text-[#574142]">Tax</span>
+                  <span className="text-[#574142]">Impuestos</span>
                   <span>$50.00</span>
                 </div>
                 <div className="flex justify-between border-t border-[#eaeaea] pt-4 text-[1.7rem] font-semibold">
@@ -146,32 +146,32 @@ export default function ShoppingCartPage() {
 
               <div className="mb-6">
                 <label className="mb-2 block text-[0.68rem] uppercase tracking-[0.18em] text-[#574142]">
-                  Promo Code
+                  Código promocional
                 </label>
                 <div className="flex gap-2">
                   <input
                     className="flex-1 border border-[#eaeaea] px-4 py-2 text-[1rem] outline-none transition-colors focus:border-[#241919]"
-                    placeholder="Enter code"
+                    placeholder="Ingresa el código"
                     type="text"
                   />
                   <button className="border border-[#241919] px-4 py-2 text-[0.8rem] font-semibold uppercase tracking-[0.16em] transition hover:bg-[#241919] hover:text-white" type="button">
-                    Apply
+                    Aplicar
                   </button>
                 </div>
               </div>
 
               <button className="mb-4 w-full rounded-sm bg-[#8b1e2d] py-4 text-[0.8rem] font-semibold uppercase tracking-[0.22em] text-white transition hover:opacity-90 active:scale-95" type="button">
-                Proceed to Checkout
+                Proceder al pago
               </button>
 
               <div className="flex items-center justify-center gap-2 text-[#574142]">
                 <span aria-hidden="true">Lock</span>
-                <span className="text-[0.72rem] uppercase tracking-[0.16em]">Secure Checkout Guaranteed</span>
+                <span className="text-[0.72rem] uppercase tracking-[0.16em]">Pago seguro garantizado</span>
               </div>
 
               <div className="mt-8 border-t border-[#eaeaea] pt-6">
                 <p className="mb-4 text-[0.68rem] uppercase tracking-[0.18em] text-[#574142]">
-                  We Accept
+                  Aceptamos
                 </p>
                 <div className="flex gap-4 opacity-60 grayscale transition-all duration-300 hover:grayscale-0">
                   <span>Card</span>
@@ -185,7 +185,7 @@ export default function ShoppingCartPage() {
 
         <section className="mt-20">
           <h2 className="mb-8 border-b border-[#eaeaea] pb-4 text-[2rem] font-semibold text-[#241919]">
-            Complete the Look
+            Completa el look
           </h2>
           <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
             {relatedItems.map((item) => (
@@ -224,7 +224,7 @@ export default function ShoppingCartPage() {
             ))}
           </div>
           <div className="text-sm uppercase tracking-wide text-neutral-500">
-            &copy; 2024 Feria Americana. Curated Quality.
+            &copy; 2024 Feria Americana. Calidad curada.
           </div>
         </div>
       </footer>

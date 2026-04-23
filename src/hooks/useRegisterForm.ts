@@ -26,23 +26,23 @@ const initialValues: RegisterValues = {
 function validateField(name: keyof RegisterValues, values: RegisterValues) {
   switch (name) {
     case 'name':
-      return validateRequired(values.name, 'Enter your full name.')
+      return validateRequired(values.name, 'Ingresa tu nombre completo.')
     case 'email':
       return validateEmail(values.email)
     case 'password':
       return validatePassword(values.password)
     case 'confirmPassword':
       if (!values.confirmPassword) {
-        return 'Confirm your password.'
+        return 'Confirma tu contraseña.'
       }
 
       return values.confirmPassword === values.password
         ? ''
-        : 'Passwords do not match.'
+        : 'Las contraseñas no coinciden.'
     case 'acceptedTerms':
       return values.acceptedTerms
         ? ''
-        : 'You need to accept the terms to continue.'
+        : 'Debes aceptar los términos para continuar.'
     default:
       return ''
   }

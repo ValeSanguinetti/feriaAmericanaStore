@@ -6,62 +6,62 @@ import catalogOvercoat from '../../assets/catalog-stitch-overcoat.jpg'
 import catalogSilkShirt from '../../assets/catalog-stitch-silk-shirt.jpg'
 import catalogTee from '../../assets/catalog-stitch-tee.jpg'
 
-const navItems = ['New Arrivals', 'Collections', 'Vintage', 'Editorial']
+const navItems = ['Novedades', 'Colecciones', 'Vintage', 'Editorial']
 
 const categoryFilters = [
-  { count: 24, label: 'Outerwear', selected: true },
+  { count: 24, label: 'Abrigos', selected: true },
   { count: 42, label: 'Denim' },
-  { count: 18, label: 'Accessories' },
-  { count: 31, label: 'Knitwear' },
+  { count: 18, label: 'Accesorios' },
+  { count: 31, label: 'Tejidos' },
 ]
 
 const sizeFilters = ['XS', 'S', 'M', 'L', 'XL', 'OS']
-const genderFilters = ['Men', 'Women', 'Unisex']
+const genderFilters = ['Hombre', 'Mujer', 'Unisex']
 
 const products = [
   {
-    category: 'Archival Outerwear',
+    category: 'Abrigos de archivo',
     image: catalogOvercoat,
     price: '$420.00',
-    title: "90's Cashmere Longline Overcoat",
+    title: "Abrigo largo de cashmere de los 90",
     wishlist: true,
   },
   {
-    badge: 'Sold Out',
-    category: 'Selvedge Denim',
+    badge: 'Agotado',
+    category: 'Denim selvedge',
     image: catalogDenim,
     mutedPrice: true,
     price: '$185.00',
-    title: 'Raw Japanese Indigo Denim',
+    title: 'Denim índigo japonés crudo',
   },
   {
-    category: 'Luxury Basics',
+    category: 'Básicos de lujo',
     image: catalogSilkShirt,
     price: '$210.00',
-    title: 'Cream Silk Button-Down',
+    title: 'Camisa de seda crema',
     wishlist: true,
   },
   {
-    category: 'Graphic Vintage',
+    category: 'Vintage gráfico',
     image: catalogTee,
     price: '$85.00',
-    title: '1988 World Tour Graphic Tee',
+    title: 'Remera gráfica World Tour 1988',
   },
   {
-    category: 'Premium Knitwear',
+    category: 'Tejidos premium',
     image: catalogCardigan,
     price: '$340.00',
-    title: 'Hand-Knit Mohair Cardigan',
+    title: 'Cárdigan de mohair tejido a mano',
   },
   {
-    category: 'Leather Goods',
+    category: 'Artículos de cuero',
     image: catalogLoafers,
     price: '$290.00',
-    title: 'Vintage Tassel Loafers',
+    title: 'Mocasines vintage con borlas',
   },
 ]
 
-const footerLinks = ['Shipping', 'Returns', 'Privacy', 'Contact', 'Sustainability']
+const footerLinks = ['Envíos', 'Devoluciones', 'Privacidad', 'Contacto', 'Sustentabilidad']
 
 export default function CatalogPage() {
   return (
@@ -93,15 +93,15 @@ export default function CatalogPage() {
           </div>
 
           <div className="flex items-center gap-4 sm:gap-6">
-            <button aria-label="Search" className="border-0 bg-transparent p-0 text-zinc-600" type="button">
-              Search
+            <button aria-label="Buscar" className="border-0 bg-transparent p-0 text-zinc-600" type="button">
+              Buscar
             </button>
             <Link className="text-zinc-600 no-underline transition-colors hover:text-[#8b1e2d]" to="/profile">
-              Account
+              Cuenta
             </Link>
             <div className="relative">
-              <Link aria-label="Shopping bag" className="border-0 bg-transparent p-0 text-zinc-600 no-underline" to="/shopping-cart">
-                Bag
+              <Link aria-label="Bolso de compras" className="border-0 bg-transparent p-0 text-zinc-600 no-underline" to="/shopping-cart">
+              Bolso
               </Link>
               <span className="absolute -top-1 -right-2 flex h-4 w-4 items-center justify-center rounded-full bg-[#8b1e2d] text-[10px] text-white">
                 2
@@ -115,15 +115,15 @@ export default function CatalogPage() {
         <div className="flex flex-col gap-12 md:flex-row">
           <aside className="w-full shrink-0 space-y-10 md:w-64">
             <div className="flex items-center justify-between">
-              <h2 className="text-sm font-bold uppercase tracking-[0.08em] text-zinc-900">Filters</h2>
+              <h2 className="text-sm font-bold uppercase tracking-[0.08em] text-zinc-900">Filtros</h2>
               <button className="text-[0.72rem] text-zinc-400 underline underline-offset-4 transition-colors hover:text-[#8b1e2d]" type="button">
-                Reset All
+                Restablecer todo
               </button>
             </div>
 
             <div>
               <h3 className="mb-4 text-[0.78rem] font-semibold uppercase tracking-[0.16em] text-zinc-900">
-                Category
+                Categoría
               </h3>
               <ul className="space-y-3">
                 {categoryFilters.map((filter) => (
@@ -146,7 +146,7 @@ export default function CatalogPage() {
 
             <div>
               <h3 className="mb-4 text-[0.78rem] font-semibold uppercase tracking-[0.16em] text-zinc-900">
-                Price Range
+                Rango de precios
               </h3>
               <div className="space-y-4">
                 <div className="flex items-center justify-between text-[0.72rem] text-zinc-500">
@@ -159,10 +159,10 @@ export default function CatalogPage() {
                 />
                 <div className="flex gap-2">
                   <div className="flex-1 border border-[#debfbf] bg-white px-3 py-2 text-[0.72rem] text-zinc-900">
-                    $ Min
+                    $ Mín
                   </div>
                   <div className="flex-1 border border-[#debfbf] bg-white px-3 py-2 text-[0.72rem] text-zinc-900">
-                    $ Max
+                    $ Máx
                   </div>
                 </div>
               </div>
@@ -170,7 +170,7 @@ export default function CatalogPage() {
 
             <div>
               <h3 className="mb-4 text-[0.78rem] font-semibold uppercase tracking-[0.16em] text-zinc-900">
-                Size
+                Talle
               </h3>
               <div className="grid grid-cols-4 gap-2">
                 {sizeFilters.map((size) => (
@@ -191,7 +191,7 @@ export default function CatalogPage() {
 
             <div>
               <h3 className="mb-4 text-[0.78rem] font-semibold uppercase tracking-[0.16em] text-zinc-900">
-                Gender
+                Género
               </h3>
               <ul className="space-y-2">
                 {genderFilters.map((filter) => (
@@ -215,19 +215,19 @@ export default function CatalogPage() {
             <div className="mb-10 flex flex-col gap-4 border-b border-zinc-100 pb-4 sm:flex-row sm:items-baseline sm:justify-between">
               <div>
                 <h1 className="m-0 text-[clamp(2.6rem,6vw,4rem)] tracking-[-0.06em] text-zinc-900">
-                  Our Catalog
+                  Nuestro catálogo
                 </h1>
-                <p className="m-0 mt-1 text-[1rem] text-zinc-500">124 Curated Pieces Available</p>
+                <p className="m-0 mt-1 text-[1rem] text-zinc-500">124 piezas curadas disponibles</p>
               </div>
               <div className="flex items-center gap-4">
                 <span className="text-[0.68rem] uppercase tracking-[0.22em] text-zinc-400">
-                  Sort By:
+                  Ordenar por:
                 </span>
                 <select className="border-0 bg-transparent text-[0.78rem] font-bold uppercase text-zinc-900 outline-none">
-                  <option>Latest Arrival</option>
-                  <option>Price: Low to High</option>
-                  <option>Price: High to Low</option>
-                  <option>Most Popular</option>
+                  <option>Últimos ingresos</option>
+                  <option>Precio: menor a mayor</option>
+                  <option>Precio: mayor a menor</option>
+                  <option>Más populares</option>
                 </select>
               </div>
             </div>
@@ -245,7 +245,7 @@ export default function CatalogPage() {
                       className="absolute right-0 bottom-0 left-0 translate-y-full bg-[#8b1e2d] py-4 text-[0.76rem] font-semibold uppercase tracking-[0.22em] text-white transition-transform duration-300 group-hover:translate-y-0"
                       to="/shopping-cart"
                     >
-                      Add to Bag
+                      Agregar al bolso
                     </Link>
                     {product.wishlist ? (
                       <Link
@@ -253,7 +253,7 @@ export default function CatalogPage() {
                         to="/wishlist"
                       >
                         <span aria-hidden="true" className="text-zinc-900">
-                          Heart
+                          Favorito
                         </span>
                       </Link>
                     ) : null}
@@ -314,7 +314,7 @@ export default function CatalogPage() {
               Feria Americana
             </span>
             <p className="m-0 text-[0.58rem] uppercase tracking-[0.24em] text-zinc-400">
-              &copy; 2024 Feria Americana. Curated quality.
+              &copy; 2024 Feria Americana. Calidad curada.
             </p>
           </div>
 
@@ -332,10 +332,10 @@ export default function CatalogPage() {
 
           <div className="flex gap-4 text-zinc-400">
             <a className="no-underline transition-colors hover:text-[#8b1e2d]" href="/">
-              Share
+              Compartir
             </a>
             <a className="no-underline transition-colors hover:text-[#8b1e2d]" href="/">
-              Mail
+              Correo
             </a>
           </div>
         </div>

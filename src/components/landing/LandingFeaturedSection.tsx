@@ -5,25 +5,25 @@ import landingFeatureTrouser from '../../assets/landing-feature-trouser.png'
 
 const featureCards = [
   {
-    badge: 'Limited Edition',
+    badge: 'Edición limitada',
     cta: '+',
     image: landingFeatureCoat,
     price: '$1,850.00',
-    title: 'Sculpted Wool Overcoat',
+    title: 'Abrigo esculpido de lana',
   },
   {
-    badge: 'New Arrival',
-    cta: 'Add to bag',
+    badge: 'Nuevo ingreso',
+    cta: 'Agregar al bolso',
     image: landingFeatureBlouse,
     price: '$620.00',
-    title: 'Noir Silk Blouse',
+    title: 'Blusa noir de seda',
   },
   {
-    badge: 'Essential',
-    cta: 'Add to bag',
+    badge: 'Esencial',
+    cta: 'Agregar al bolso',
     image: landingFeatureTrouser,
     price: '$480.00',
-    title: 'Tapered Trouser',
+    title: 'Pantalón tapered',
   },
 ]
 
@@ -35,18 +35,18 @@ export function LandingFeaturedSection() {
       <div className="mb-12 flex flex-col justify-between gap-6 md:flex-row md:items-end">
         <div>
           <h2 className="m-0 mb-3 font-headline text-[clamp(2rem,4vw,3.8rem)] leading-[0.95] font-extrabold tracking-[-0.05em] text-headline">
-            Featured Selection
+            Selección destacada
           </h2>
           <p className="m-0 max-w-[34rem] leading-7 text-text-muted">
-            The season&apos;s most-coveted pieces, selected by our creative directors for their
-            timeless quality.
+            Las piezas más deseadas de la temporada, seleccionadas por nuestra dirección creativa
+            por su calidad atemporal.
           </p>
         </div>
         <Link
           className="border-b-2 border-accent pb-1 text-[0.8rem] font-bold uppercase tracking-[0.18em] text-accent no-underline"
           to="/catalog"
         >
-          View all collections
+          Ver todas las colecciones
         </Link>
       </div>
 

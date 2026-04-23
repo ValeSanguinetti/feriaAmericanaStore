@@ -20,10 +20,10 @@ export function RegisterForm() {
           id="register-title"
           className="m-0 text-[2rem] font-semibold text-[#241919] sm:text-[2.15rem]"
         >
-          Create Account
+          Crear cuenta
         </h2>
         <p className="m-0 mt-2 text-[1rem] text-[#574142]">
-          Experience fashion curated for you.
+          Vive una moda curada para ti.
         </p>
       </div>
 
@@ -31,7 +31,7 @@ export function RegisterForm() {
         <div className="space-y-5">
           <label className="grid gap-2" htmlFor="full-name">
             <span className="text-[0.62rem] uppercase tracking-[0.16em] text-[#574142]">
-              Full Name
+              Nombre completo
             </span>
             <input
               aria-describedby={errors.name ? 'full-name-error' : undefined}
@@ -56,7 +56,7 @@ export function RegisterForm() {
 
           <label className="grid gap-2" htmlFor="email">
             <span className="text-[0.62rem] uppercase tracking-[0.16em] text-[#574142]">
-              Email Address
+              Correo electrónico
             </span>
             <input
               aria-describedby={errors.email ? 'email-error' : undefined}
@@ -81,13 +81,13 @@ export function RegisterForm() {
 
           <label className="grid gap-2" htmlFor="password">
             <span className="text-[0.62rem] uppercase tracking-[0.16em] text-[#574142]">
-              Password
+              Contraseña
             </span>
             <span className="relative block">
               <input
                 aria-describedby={errors.password ? 'password-error' : undefined}
                 aria-invalid={Boolean(errors.password)}
-                aria-label="Password"
+                aria-label="Contraseña"
                 className={`h-12 w-full rounded-[4px] border bg-white px-4 pr-12 text-[0.92rem] text-[#241919] outline-none transition focus:border-[#241919] ${
                   errors.password ? 'border-[#ba1a1a] bg-[#fff3f1]' : 'border-[#debfbf]'
                 }`}
@@ -103,7 +103,7 @@ export function RegisterForm() {
                 aria-hidden="true"
                 className="absolute top-1/2 right-4 -translate-y-1/2 text-[0.9rem] text-[#574142]"
               >
-                View
+                Ver
               </span>
             </span>
             {errors.password ? (
@@ -115,7 +115,7 @@ export function RegisterForm() {
 
           <label className="grid gap-2" htmlFor="confirm-password">
             <span className="text-[0.62rem] uppercase tracking-[0.16em] text-[#574142]">
-              Confirm Password
+              Confirmar contraseña
             </span>
             <input
               aria-describedby={errors.confirmPassword ? 'confirm-password-error' : undefined}
@@ -156,19 +156,19 @@ export function RegisterForm() {
             onChange={(event) => updateValue(event, 'acceptedTerms')}
           />
           <span className="text-[0.88rem] leading-5 text-[#574142]">
-            I agree to the{' '}
+            Acepto los{' '}
             <a
               className="font-semibold text-[#8b1e2d] underline underline-offset-4"
               href="/"
             >
-              Terms of Service
+              Términos de servicio
             </a>{' '}
-            and{' '}
+            y la{' '}
             <a
               className="font-semibold text-[#8b1e2d] underline underline-offset-4"
               href="/"
             >
-              Privacy Policy
+              Política de privacidad
             </a>
             .
           </span>
@@ -185,24 +185,24 @@ export function RegisterForm() {
             className="mt-2 h-14 w-full rounded-lg bg-[#8b1e2d] text-[0.78rem] font-semibold uppercase tracking-[0.22em] text-white transition duration-300 hover:bg-[#6b0119] active:scale-[0.98]"
             type="submit"
           >
-            Create account
+            Crear cuenta
           </button>
 
           <div className="border-t border-[#debfbf] pt-6 text-center">
             <p className="m-0 text-[1rem] text-[#574142]">
-              Already have an account?
+              ¿Ya tienes una cuenta?
             </p>
             <Link
               className="ml-1 font-bold uppercase text-[#241919] no-underline transition-colors hover:text-[#8b1e2d]"
               to="/login"
             >
-              Login
+              Iniciar sesión
             </Link>
           </div>
         </div>
 
         <div className="flex justify-center gap-6 text-[#8b7171]">
-          <span aria-hidden="true">Verified</span>
+          <span aria-hidden="true">Verificado</span>
           <span aria-hidden="true">Premium</span>
           <span aria-hidden="true">Eco</span>
         </div>
@@ -216,13 +216,13 @@ export function RegisterForm() {
               type="button"
               onClick={reset}
             >
-              Start over
+              Empezar de nuevo
             </button>
           }
         >
-          <strong className="block">Registration ready.</strong>
+          <strong className="block">Registro listo.</strong>
           <p className="mt-1 mb-0 text-success-text/90">
-            {values.name || 'Your account'} can now be connected to a backend signup flow with{' '}
+            {values.name || 'Tu cuenta'} ahora puede conectarse a un flujo real de registro con{' '}
             <span className="underline decoration-success-text/30 underline-offset-4">
               {values.email}
             </span>
